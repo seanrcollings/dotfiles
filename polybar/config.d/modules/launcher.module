@@ -1,0 +1,8 @@
+[module/launcher]
+type = custom/script
+format-padding = 5
+format = <label>
+label = 
+exec = "echo placeholder"
+interval=99
+click-left = "rofi -show drun -theme /home/sean/.config/rofi/themes/apps.rasi"

@@ -1,0 +1,7 @@
+{
+  "layer": "top",
+  "output": "DP-1",
+  "position": "right",
+  "width": 300,
+  "modules-left": ["cpu"]
+}

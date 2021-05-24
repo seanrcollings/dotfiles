@@ -1,0 +1,278 @@
+[colors]
+background = #dd0A0908
+background-alt = #444
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #3CB371
+
+alert = #bd2c40
+
+height = 35
+
+[bar/laptop]
+monitor = eDP1
+width = 100%
+height = 40
+
+background = ${colors.background}
+foreground = #ccffffff
+
+line-color = #00000000
+line-size  = 2
+
+spacing = 2
+padding-right = 5
+module-margin = 4
+
+font-0 = NotoSans-Regular:size=15;1
+font-1 = MaterialIcons:size=15;5
+font-2 = NimbusSans:size=15;4
+font-3 = FontAwesome5Free:style=Solid:size=15;3
+font-4 = FontAwesome5Free:style=Regular:size=15;3
+font-5 = FontAwesome5Brands:style=Regular:size=15;3
+font-6 = "Unifont:size=21:antialias=false;1"
+font-7 = "Wucon Siji:pixelsize=20:size=22;1"
+
+
+modules-left = i3
+modules-center = date 
+modules-right = backlight alsa battery bluetooth wireless-network powermenu
+
+[bar/external1]
+inherit = bar/laptop
+monitor = DP1
+height  = 35 
+modules-left = i3
+modules-center = date
+modules-right = alsa battery bluetooth wireless-network powermenu
+
+
+font-0 = NotoSans-Regular:size=13;1
+font-1 = MaterialIcons:size=15;5
+font-2 = NimbusSans:size=15;4
+font-3 = FontAwesome5Free:style=Solid:size=15;3
+font-4 = FontAwesome5Free:style=Regular:size=15;3
+font-5 = FontAwesome5Brands:style=Regular:size=15;3
+font-6 = "Unifont:size=21:antialias=false;1"
+font-7 = "Wucon Siji:pixelsize=20:size=22;1"
+
+
+[bar/external2]
+inherit = bar/external1
+monitor = DP2
+
+modules-center = date
+modules-right = alsa battery bluetooth wireless-network powermenu
+
+font-0 = NotoSans-Regular:size=12;1
+font-1 = NimbusSans:size=12;4
+font-2 = FontAwesome5Free:style=Solid:size=12;3
+font-3 = FontAwesome5Free:style=Regular:size=12;3
+font-4 = FontAwesome5Brands:style=Regular:size=12;3
+font-5 = "Unifont:size=21:antialias=false;1"
+font-6 = "Wucon Siji:pixelsize=20:size=22;1"
+font-7 = MaterialIcons:size=15;5
+
+[module/backlight]
+type = internal/xbacklight
+format = <ramp> <bar>
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-font = 3
+bar-indicator-foreground = #ff
+bar-fill = ─
+bar-fill-font = 3
+bar-fill-foreground = #c9665e
+bar-empty = ─
+bar-empty-font = 3
+bar-empty-foreground = #44
+
+[module/battery]
+type = internal/battery
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = #f53c3c
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = #ffa900
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+bar-capacity-width = 10
+bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
+bar-capacity-fill = █
+bar-capacity-fill-foreground = #ddffffff
+bar-capacity-fill-font = 3
+bar-capacity-empty = █
+bar-capacity-empty-font = 3
+bar-capacity-empty-foreground = #44ffffff
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+ws-icon-0 = Browser;
+ws-icon-1 = Programming;
+ws-icon-2 = Terminal;
+ws-icon-3 = Chat;
+ws-icon-default = 
+
+label-dimmed-underline = ${BAR.background}
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+label-focused =  %icon%
+label-focused-foreground = #fff
+label-focused-background = #773f3f3f
+label-focused-underline = ${colors.primary}
+label-focused-padding = 4
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %icon%
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %icon%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %icon%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-underline = #9b0a20
+label-urgent-font = 4
+label-urgent-padding = 4
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/date]
+type = internal/date
+format-padding = 5
+date =    %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%I:%M %p%{F-}
+date-alt =   %%{F#fff}%A, %d %B %Y  %%{F#fff}%I:%M%{F#666}:%%{F#c9665e}%S%%{F-} %p%
+
+[module/memory]
+type = internal/memory
+format = <label>
+label =   %gb_used% | %gb_free%
+
+bar-used-width = 30
+bar-used-foreground-0 = #aaff77
+bar-used-foreground-1 = #aaff77
+bar-used-foreground-2 = #fba922
+bar-used-foreground-3 = #ff5555
+bar-used-indicator = |
+bar-used-indicator-font = 6
+bar-used-indicator-foreground = #ff
+bar-used-fill = ─
+bar-used-fill-font = 6
+bar-used-empty = ─
+bar-used-empty-font = 6
+bar-used-empty-foreground = #444444
+
+[module/wireless-network]
+type = internal/network
+interface = wlp58s0
+interval = 3.0
+ping-interval = 10
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%
+label-disconnected =  not connected
+label-disconnected-foreground = #66
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+
+animation-packetloss-0 = 
+animation-packetloss-0-foreground = #ffa64c
+animation-packetloss-1 = 
+animation-packetloss-1-foreground = ${bar/top.foreground}
+animation-packetloss-framerate = 500
+
+[module/wired-network]
+type = internal/network
+interface = enp3s0
+interval = 3.0
+
+label-connected =    %local_ip%
+label-disconnected-foreground = #66
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <label-volume> <bar-volume>
+label-volume = 
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/bluetooth]
+type = custom/script
+exec = rofi-bluetooth --status
+interval = 1
+click-left = rofi-bluetooth &
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+label =  %percentage%%
+
+
+[module/powermenu]
+type = custom/script
+format-padding = 2
+format = <label>
+label = 
+exec="echo placeholder"
+interval=999999999
+click-left = /home/sean/.config/rofi/scripts/powermenu.sh
+

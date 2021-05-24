@@ -1,0 +1,22 @@
+#window {
+  background-color: #1d1f28;
+  font-family: "SauceCodePro Nerd Font";
+  font-size: 50px;
+  border-radius: 10px;
+  border: 1px solid #4c7899;
+}
+
+#input {
+  font-size: 0px;
+  padding: 0px;
+}
+
+#inner-box {
+  padding: 10px;
+  padding-top: 0px;
+}
+
+#entry {
+  padding: 10px;
+  padding-left: 45px;
+}

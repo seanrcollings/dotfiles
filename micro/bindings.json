@@ -1,0 +1,7 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "Ctrl-/": "lua:comment.comment",
+    "Ctrl-Backspace": "DeleteWordLeft",
+    "Ctrl-p": "lua:filemanager.toggle_tree",
+    "CtrlUnderscore": "lua:comment.comment"
+}

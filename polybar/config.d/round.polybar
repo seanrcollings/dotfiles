@@ -1,0 +1,79 @@
+[include]
+include-file = /home/sean/.config/polybar/config.d/modules/launcher.module
+include-file = /home/sean/.config/polybar/config.d/modules/i3.module
+include-file = /home/sean/.config/polybar/config.d/modules/date.module
+include-file = /home/sean/.config/polybar/config.d/modules/backlight.module
+include-file = /home/sean/.config/polybar/config.d/modules/battery.module
+include-file = /home/sean/.config/polybar/config.d/modules/wireless.module
+include-file = /home/sean/.config/polybar/config.d/modules/alsa.module
+include-file = /home/sean/.config/polybar/config.d/modules/powermenu.module
+include-file = /home/sean/.config/polybar/config.d/modules/bluetooth.module
+
+[colors]
+green-accent = #3CB371 
+
+background = #222
+background-alt = #444
+
+foreground = #dfdfdf
+foreground-alt = #555
+
+[bar/base]
+monitor = ${env:MONITOR:DP1}
+monitor-fallback = eDP1
+override-redirect = true
+height = 40
+background = ${colors.background}
+foreground = ${colors.foreground}
+radius = 21
+wm-restack = i3
+offset-y = 10
+
+font-0 = NotoSans-Regular:size=15;1
+font-1 = FontAwesome5Brands:style=Regular:size=15;3
+font-2 = FontAwesome5Free:style=Solid:size=16;3
+font-3 = FontAwesome5Free:style=Regular:size=15;3
+font-4 = SauceCodePro Nerd Font:size=15;3
+
+[bar/left]
+inherits = bar/base
+width = 20%
+offset-x = 1%:-16
+padding-left = 0
+padding-right = 0
+fixed-center = true
+modules-left = launcher i3
+line-size=2
+
+[bar/middle]
+inherit = bar/base
+offset-x = 40%
+width  = 20%
+modules-left  = ""
+modules-center = date
+modules-right = ""
+
+
+[bar/right]
+inherit = bar/base
+offset-x = 85%
+width = 14%
+padding-right = 0 
+padding-left = 5
+
+font-0 = NotoSans-Regular:size=15;1
+font-1 = SauceCodePro Nerd Font:size=15;3
+font-2 = FontAwesome5Free:style=Solid:size=16;3
+
+modules-left = 
+modules-right = alsa-bar bluetooth wireless-network battery powermenu
+
+
+[bar/span]
+inherit = bar/base
+line-size = 2
+modules-left = launcher i3
+modules-center = date
+modules-right = alsa-bar bluetooth wireless-network battery powermenu
+offset-x = 1%:-16
+width = 99%

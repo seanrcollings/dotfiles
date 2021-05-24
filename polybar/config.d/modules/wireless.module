@@ -1,0 +1,20 @@
+[module/wireless-network]
+type = internal/network
+interface = wlp58s0
+interval = 3.0
+;ping-interval = 10
+
+format-connected = %{T5}<ramp-signal>%{T-}
+label-connected = %{T5} %essid% %{T-}
+label-disconnected = %{T5}睊%{T-}
+label-disconnected-foreground = #66
+format-connected-padding = 2
+format-disconnected-padding = 2
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+
+

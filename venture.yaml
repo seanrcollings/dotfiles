@@ -1,0 +1,18 @@
+directories:
+- base: /home/sean/sourcecode
+  subs:
+  - rust
+  - crystal
+  - ComputerScience/*
+  - scripts
+  - atomicjolt
+exec: code -r
+show_files: true
+show_hidden: false
+show_icons: true
+ui_provider: rofi
+wofi:
+  config: /home/sean/.config/wofi/projects/config
+  stylesheet: /home/sean/.config/wofi/projects/style.css
+rofi:
+    theme: /home/sean/.config/rofi/venture.rasi

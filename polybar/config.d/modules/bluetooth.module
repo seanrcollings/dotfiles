@@ -1,0 +1,7 @@
+[module/bluetooth]
+type = custom/script
+exec = rofi-bluetooth --status
+format-padding = 1
+interval = 3
+click-left = rofi-bluetooth &
+label = %{T5}%output%%{T-}

@@ -1,0 +1,12 @@
+#!/usr/bin/fish
+
+
+xrandr --dpi 192
+mv /home/sean/.config/laptop-chrome-flags.conf /home/sean/.config/chrome-flags.conf
+
+
+set LOCK_SCREEN_DIR /home/sean/.cache/i3lock/laptop
+if test -d $LOCK_SCREEN_DIR
+    mv  /home/sean/.cache/i3lock/current /home/sean/.cache/i3lock/desktop
+    mv $LOCK_SCREEN_DIR /home/sean/.cache/i3lock/current
+end

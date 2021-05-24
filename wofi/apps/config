@@ -1,0 +1,6 @@
+columns=3
+prompt=SEARCH
+mode=drun
+allow_markup=true
+allow_images=true
+no_actions=true

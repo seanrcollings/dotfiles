@@ -1,0 +1,39 @@
+window {
+  background-color: #1d1f28;
+  font-family: "Roboto";
+  font-size: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #4c7899;
+}	
+
+#inner-box {
+  margin: 5px;
+}
+
+#input {
+  margin: 5px;
+  border-radius: 0px;
+  font-size: 30px;
+  background-color: transparent;
+  border: 0px solid transparent;
+  border-bottom: 1px solid white;
+}
+
+#scroll {
+  margin: 5px;
+  border: 1px solid transparent;
+}
+
+#entry {
+  border-radius: 20px;
+}
+
+#entry:selected {
+  outline: 1px solid transparent;
+  border: 1px solid white;
+}
+
+#img {
+  margin-right: 10px;
+}

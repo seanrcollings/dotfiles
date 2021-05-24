@@ -1,0 +1,242 @@
+{
+  "workbench.colorTheme": "Monokai Gravity",
+  "workbench.iconTheme": "material-icon-theme",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.stablePeek": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "files.autoSave": "onWindowChange",
+  "sync.autoUpload": true,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.ref.viewer": "tabOrBrowser",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.jediEnabled": false,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.mypy_cache": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/**.class": true,
+    "**/**.venv": true
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "files.trimTrailingWhitespace": true,
+  "search.exclude": {
+    "env/**": true
+  },
+  "tabnine.experimentalAutoImports": true,
+  "editor.renderWhitespace": "none",
+  "editor.fontFamily": "'Droid Sans Mono', 'Noto Color Emoji', 'SauceCodePro Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "python.languageServer": "Pylance",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.tabSize": 2
+  },
+  "[ruby]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "rebornix.ruby"
+  },
+  "[rust]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "rust-lang.rust"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "editor.quickSuggestions": true,
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[scss]": {
+    "editor.tabSize": 2
+  },
+  "[erb]": {
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[svelte]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.intellisense": "rubyLocate",
+  "ruby.useLanguageServer": true,
+  "ruby.linter.run": "onSave",
+  "ruby.interpreter.commandPath": "/home/sean/.asdf/shims/ruby",
+  "solargraph.bundlerPath": "/home/sean/.asdf/shims/bundle",
+  "solargraph.commandPath": "/home/sean/.asdf/shims/solargraph",
+  "python.linting.pylintEnabled": true,
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "python.showStartPage": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "prettier.arrowParens": "avoid",
+  "prettier.disableLanguages": ["django-html"],
+  "workbench.editor.enablePreview": false,
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "window.titleBarStyle": "custom",
+  "window.customMenuBarAltFocus": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.external.linuxExec": "termite",
+  "prettier.jsxSingleQuote": true,
+  "notebook.kernelProviderAssociations": [],
+  "workbench.colorCustomizations": {
+    "[Monokai Gravity]": {
+      "peekViewEditor.matchHighlightBackground": "#ffffff00"
+      // "peekViewEditor.background": "#ff0000"
+    }
+  },
+
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "[Monokai Gravity]": {
+      "rules": {
+        "function": {
+          "foreground": "#3BC0F0"
+        },
+        "function.declaration": {
+          "foreground": "#a4c267"
+        }
+      }
+    }
+  },
+
+  "editor.tokenColorCustomizations": {
+    "[Monokai Gravity]": {
+      "textMateRules": [
+        {
+          "scope": ["variable.other.constant"],
+          "settings": {
+            "foreground": "#BE84FF"
+          }
+        },
+        {
+          "scope": [
+            "punctuation.definition.block.js",
+            "punctuation.definition.binding-pattern.object.js.jsx",
+            "meta.jsx.children.js.jsx",
+            "meta.jsx.children.tsx",
+            "meta.arrow.tsx"
+          ],
+          "settings": {
+            "foreground": "#EEEEEE"
+          }
+        },
+        {
+          "scope": [
+            "punctuation.section.embedded.begin.tsx",
+            "punctuation.section.embedded.end.tsx",
+            "meta.embedded.expression.js.jsx",
+            "punctuation.section.embedded.begin.js.jsx",
+            "punctuation.section.embedded.end.js.jsx",
+            "punctuation.definition.template-expression.end",
+            "punctuation.definition.template-expression.begin",
+            "meta.embedded.line.ruby"
+          ],
+          "settings": {
+            "foreground": "#E13E79"
+          }
+        },
+        {
+          "scope": "support.class.component.js.jsx",
+          "settings": {
+            "foreground": "#66D9EF"
+          }
+        },
+        {
+          "scope": "variable.language.this",
+          "settings": {
+            "foreground": "#dc9138"
+          }
+        },
+        {
+          "scope": [
+            "punctuation.definition.string.end.ruby",
+            "punctuation.definition.string.begin.ruby"
+          ],
+          "settings": {
+            "foreground": "#E5B567"
+          }
+        },
+        {
+          "scope": ["support.class", "support.class.ruby"],
+          "settings": {
+            "foreground": "#66D9EF",
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": ["support.function"],
+          "settings": {
+            "foreground": "#66D9EF"
+          }
+        },
+        {
+          "scope": [
+            "variable.language.self.ruby",
+            "variable.parameter.function.language.special.self.python"
+          ],
+          "settings": {
+            "foreground": "#FD971F"
+          }
+        }
+      ]
+    }
+  },
+  "ruby.rubocop.suppressRubocopWarnings": true,
+  "editor.semanticHighlighting.enabled": true,
+  "javascript.implicitProjectConfig.checkJs": true,
+  "python.formatting.provider": "black",
+  "files.associations": {
+    "*.jsx": "javascriptreact"
+  },
+  "ruby.format": "rubocop",
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true,
+      "configFilePath": ".rubocop.yml",
+      "forceExclusion": true
+    }
+  },
+  "explorer.confirmDragAndDrop": false,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "explorer.confirmDelete": false,
+  "svelte.language-server.runtime": "/usr/bin/node",
+  "java.refactor.renameFromFileExplorer": "autoApply",
+  "editor.fontSize": 13,
+  "rust-client.rustupPath": "/home/sean/.asdf/shims/rustup",
+  "mypy.dmypyExecutable": "/home/sean/.mypyls/bin/dmypy"
+}

@@ -1,0 +1,24 @@
+[module/date]
+type = internal/date
+format-padding = 5
+date =    %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%I:%M %p%{F-}
+date-alt =   %%{F#fff}%A, %d %B %Y  %%{F#fff}%I:%M%{F#666}:%%{F#c9665e}%S%%{F-} %p%
+
+[module/memory]
+type = internal/memory
+format = <label>
+label =   %gb_used% | %gb_free%
+
+bar-used-width = 30
+bar-used-foreground-0 = #aaff77
+bar-used-foreground-1 = #aaff77
+bar-used-foreground-2 = #fba922
+bar-used-foreground-3 = #ff5555
+bar-used-indicator = |
+bar-used-indicator-font = 6
+bar-used-indicator-foreground = #ff
+bar-used-fill = ─
+bar-used-fill-font = 6
+bar-used-empty = ─
+bar-used-empty-font = 6
+bar-used-empty-foreground = #444444

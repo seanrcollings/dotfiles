@@ -1,0 +1,128 @@
+{
+  "layer": "top",
+  "modules-left": [
+    "sway/workspaces",
+    "sway/mode"
+  ],
+  "modules-center": [
+    "sway/window"
+  ],
+  "modules-right": [
+  	"tray",
+    "custom/scythe",
+    "idle_inhibitor",
+    "custom/bluetooth",
+    "pulseaudio",
+    "network",
+    "battery",
+    "clock"
+  ],
+  "sway/window": {
+    "max-length": 50
+  },
+  "sway/workspaces": {
+  	"format": "{icon}",
+  	"format-icons": {
+  		"browse": "",
+  		"code": "",
+  		"terminal": "",
+  		"chat": "",
+  		"notes": ""
+  	},
+  	"persistent_workspaces": {
+  		"browse": ["DP-2"],
+  		"chat": ["DP-2"],
+  		"code": ["DP-1"],
+  		"terminal": ["DP-1"],
+  	},
+  },
+  "battery": {
+    "format": "{capacity}%  {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "states": {
+      "warning": 15,
+      "critical": 10
+    },
+    "format-charging": "{capacity}%  "
+  },
+  "clock": {
+    "format": " {:%I:%M %p}  ",
+    "format-alt": "{:%a, %d. %b  %H:%M}"
+  },
+  "pulseaudio": {
+    "format": "{volume}%  {icon}",
+    "format-bluetooth": "{volume}%   ",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "奄 ",
+        "奔 ",
+        "墳 "
+      ]
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "{essid}  直 ",
+    "format-ethernet": "{ifname} ",
+    "format-disconnected": "睊 ",
+    "tooltip-format": "{ifname}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) 直 ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 16,
+    "icon-theme": "Numix-Circle",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close"
+  },
+  "custom/bluetooth": {
+    "exec": "/home/sean/.local/bin/bluemng status",
+    "interval": 5,
+    "left-click": "/home/sean/.local/bin/bluemng toggle",
+    "right-click": "rofi-bluetooth",
+    "tooltip": true,
+    "tooltip-format": "Bluetooth"
+  },
+  "custom/scythe": {
+    "exec": "/home/sean/.local/bin/scythe timer:running:waybar",
+    "on-click-right": "/home/sean/.local/bin/scythe timer:stop",
+    "on-click": "alacritty --class floatme --title Pick a Timer -e '/home/sean/.local/bin/scythe timer:start'",
+    "return-type": "json",
+    "format": "{}",
+    "interval": 5
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": " ",
+      "deactivated": " "
+    }
+  },
+  "tray": {
+      "icon-size": 16,
+      "spacing": 15,
+  }
+}

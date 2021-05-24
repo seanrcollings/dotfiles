@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+/usr/bin/feh --bg-fill /home/sean/Pictures/wallpapers/zelda.jpg
+/home/sean/.config/polybar/startup/round-span.sh &
+
+notify-send "AUTORANDR: Loaded $AUTORANDR_CURRENT_PROFILE profile"

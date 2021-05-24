@@ -1,0 +1,19 @@
+#!/usr/bin/fish
+
+xrandr --output eDP1 --off
+xrandr --dpi 98
+
+i3-msg [workspace="^(Programming|Terminal)"] move workspace to output DP1
+i3-msg [workspace="^(Browser|Chat)"] move workspace to output DP2
+
+
+set CHROME_FLAGS /home/sean/.config/chrome-flags.conf
+if test -f $CHROME_FLAGS
+	mv $CHROME_FLAGS /home/sean/.config/laptop-chrome-flags.conf
+end
+
+set LOCK_SCREEN_DIR /home/sean/.cache/i3lock/desktop
+if test -d $LOCK_SCREEN_DIR
+    mv  /home/sean/.cache/i3lock/current /home/sean/.cache/i3lock/laptop
+    mv $LOCK_SCREEN_DIR /home/sean/.cache/i3lock/current
+end

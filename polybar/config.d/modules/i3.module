@@ -1,0 +1,50 @@
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+ws-icon-0 = Browser;
+ws-icon-1 = Programming;
+ws-icon-2 = Terminal;
+ws-icon-3 = Chat;
+ws-icon-default = 
+
+
+label-dimmed-underline = ${bar/external1.background}
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.green-accent}
+
+label-focused = %name%
+label-focused-foreground = #fff
+label-focused-background = #773f3f3f
+;label-focused-background = ${colors.green-accent}
+label-focused-underline = ${colors.green-accent}
+label-focused-padding = 4
+label-focused-font = 2
+
+
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %name%
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %name%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %name%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-underline = #9b0a20
+label-urgent-padding = 4
+
+; Separator in between workspaces
+;label-separator = |
