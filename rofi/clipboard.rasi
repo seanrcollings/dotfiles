@@ -1,0 +1,14 @@
+@import "base"
+
+window {
+	width: 1500;
+	height: 70%;
+}
+
+
+listview {
+	dynamic: false;
+}
+
+
+

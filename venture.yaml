@@ -6,13 +6,36 @@ directories:
   - ComputerScience/*
   - scripts
   - atomicjolt
-exec: code -r
+exec: code {path}
+include_parent_folder: false
+quicklaunch:
+  ARC:
+    icon: "\uF625"
+    path: /home/sean/sourcecode/arc
+    tags:
+    - "\uF81F python"
+    - project
+  Qualtrics:
+    icon: "\uFAB4"
+    path: ~/sourcecode/atomicjolt/qualtrics/
+    tags:
+    - "\uE7BA react"
+    - work
+    - "\uE23E ruby"
+  Sway:
+    icon: "\uF2D2"
+    path: ~/.config/sway/config
+    tags:
+    - "\uE615 config"
+  Venture:
+    icon: "\uE771"
+    path: ~/sourcecode/venture
+    tags:
+    - "\uF81F python"
+    - rofi
+rofi:
+  theme: /home/sean/.config/rofi/venture.rasi
 show_files: true
 show_hidden: false
 show_icons: true
 ui_provider: rofi
-wofi:
-  config: /home/sean/.config/wofi/projects/config
-  stylesheet: /home/sean/.config/wofi/projects/style.css
-rofi:
-    theme: /home/sean/.config/rofi/venture.rasi

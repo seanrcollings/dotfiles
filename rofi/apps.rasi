@@ -1,0 +1,40 @@
+
+@import "base"
+
+
+window {
+	height: 700px;
+}
+
+listview {
+	columns: 3;
+	padding: 20px 70px;
+	spacing: 20px;
+}
+
+element {
+	background-color: @backgroundc;	
+	padding: 10px;
+	orientation: vertical;
+	width: 20px;
+}
+
+element-text {
+	color: #eeeeee; 
+	horizontal-align: 0.5;
+	font: "SauceCodePro Nerd Font 14";
+}
+
+element-icon {
+	size: 70px;
+}
+
+element.selected {
+	background-color: white;
+	text-color: black;
+	border-radius: 5px;
+}
+
+element-text.selected {
+	color: #333;
+}

@@ -1,0 +1,25 @@
+#window {
+	height: 35%;
+	width: 85%;
+	padding: 5px;
+}
+
+listview {
+	layout: horizontal;
+	scrollbar: true;
+	lines: 5;
+}
+
+
+element {
+	padding: -100px 10px;
+}
+
+element-text {
+	enabled: false;
+}
+
+element-icon {
+	size: 20em;
+}
+

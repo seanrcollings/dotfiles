@@ -1,0 +1,45 @@
+configuration {
+    show-icons:false;
+    location: 3;
+    xoffset: -25;
+    yoffset: 60;   
+}
+ 
+
+* {
+    background-color: #222222;
+    text-color: #ffffffff;
+    font:"Iosevka Nerd Font 20";
+}
+ 
+/* background 0 */
+#window {
+  children: [ horibox ];
+  
+  width: 335px;
+  height: 92px;
+  background-color: #262626;
+  border-radius: 10px;
+}
+
+#horibox {
+  children: [ listview ];
+  padding: 5px;
+}
+
+#listview {
+  layout: horizontal;
+  lines: 5;
+}
+
+#element {
+  padding: 25px 20px 25px 20px;
+}
+
+/*Text color 3 */
+#element.selected {
+  foreground-color: #DE652E;
+  text-color: black;
+  background-color: #3CB371;
+  border-radius: 5px;
+}
