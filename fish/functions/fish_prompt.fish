@@ -60,6 +60,8 @@ function fish_prompt
 
         if test "$branch_name" = master
             set prompt " $git_glyph $git_ahead"
+        else if test "$branch_name" = main
+            set prompt " $git_glyph $git_ahead"
         else
             set prompt " $git_glyph $branch_name $git_ahead"
         end

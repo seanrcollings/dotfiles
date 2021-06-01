@@ -25,6 +25,7 @@ alias ber="bundle exec rake"
 alias rf="source ~/.config/fish/config.fish" # reloads the fish config
 alias ssy="sudo systemctl"
 alias ef="$EDITOR ~/.config/fish/config.fish"
+alias gls="/usr/bin/ls"
 alias ls="logo-ls"
 alias ll="logo-ls -lh"
 alias djm="./manage.py"

@@ -6,7 +6,7 @@ directories:
   - ComputerScience/*
   - scripts
   - atomicjolt
-exec: code {path}
+exec: "code -r {path}"
 include_parent_folder: false
 quicklaunch:
   ARC:
@@ -15,6 +15,13 @@ quicklaunch:
     tags:
     - "\uF81F python"
     - project
+  Mugenmonkey:
+    icon: "\uF737"
+    path: ~/mugenmonkey-rails
+    tags:
+    - "\uE7BA react"
+    - "\uE23E ruby"
+    - "\uFBE4 typescript"
   Qualtrics:
     icon: "\uFAB4"
     path: ~/sourcecode/atomicjolt/qualtrics/
@@ -39,3 +46,4 @@ show_files: true
 show_hidden: false
 show_icons: true
 ui_provider: rofi
+use_cache: false

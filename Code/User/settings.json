@@ -238,5 +238,6 @@
   "java.refactor.renameFromFileExplorer": "autoApply",
   "editor.fontSize": 13,
   "rust-client.rustupPath": "/home/sean/.asdf/shims/rustup",
-  "mypy.dmypyExecutable": "/home/sean/.mypyls/bin/dmypy"
+  "mypy.dmypyExecutable": "/home/sean/.mypyls/bin/dmypy",
+  "mypy.runUsingActiveInterpreter": true
 }
