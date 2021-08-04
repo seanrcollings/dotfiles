@@ -39,8 +39,8 @@ bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable
 
 output eDP-1 scale 1.6
-output DP-1 pos 3520 0
-output DP-2 pos 1600 370
+output DP-1 pos 1920 0 mode 2560x1440@143.856hz
+output DP-2 pos 0 230
 
 
 set $gnome-schema org.gnome.desktop.interface
@@ -70,6 +70,8 @@ bindsym Mod1+v exec code
 bindsym Print exec grim -g "$(slurp -d)" - | wl-copy
 # Gets saved in ~/Pictures/Screenshots
 bindsym Alt+Print exec grim -g "$(slurp -d)" $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim.png')
+# Screenshots the focused display
+bindsym Control+Alt+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim_display.png')
 
 # Recording
 #bindsym Control+Mod1+R exec "wf-recorder -g "$(slurp -d)" $(xdg-user-dir VIDEOS)/Captures/$(date +'%s_wf.png')""
@@ -104,6 +106,7 @@ bindsym Control+Mod1+v exec clipman pick -t rofi --tool-args="-theme clipboard"
 ################## APPEARANCE ##################
 ################################################
 
+#3BC0F0
 # class                  border   backgr.  text     indicator child_border
 client.focused           #333333  #2f2f2f  #ffffff  #5f676a   #4C7899
 client.focused_inactive  #1b1b1b  #2a2a2a  #ffffff  #222222   #222222
@@ -116,12 +119,20 @@ gaps inner 5
 gaps outer 5
 hide_edge_borders smart_no_gaps
 
+#set $rounded /home/sean/.config/sway/rounded.png
+#border_images.focused $rounded
+#border_images.focused_inactive $rounded
+#border_images.unfocused $rounded
+#border_images.urgent $rounded
+
+
 for_window [title="ranger"] floating enable
 for_window [title="floatme"] floating enable
 for_window [class="floatme"] floating enable
 for_window [app_id="org.gnome.Nautilus"] floating enable
 for_window [title="Pong!"] floating enable
 for_window [class="Gnome-screenshot"] floating enable
+for_window [title="Volume Control"] floating enable
 
 ################################################
 #################### INPUT  ####################

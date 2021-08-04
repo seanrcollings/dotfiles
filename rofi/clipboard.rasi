@@ -5,7 +5,6 @@ window {
 	height: 70%;
 }
 
-
 listview {
 	dynamic: false;
 }

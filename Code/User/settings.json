@@ -19,6 +19,7 @@
     "**/.project": true,
     "**/.settings": true,
     "**/**.class": true,
+    "**/**.pytest_cache": true,
     "**/**.venv": true
   },
   "diffEditor.ignoreTrimWhitespace": false,
@@ -34,6 +35,7 @@
     "compounds": []
   },
   "python.languageServer": "Pylance",
+
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features",
     "editor.tabSize": 2
@@ -51,7 +53,7 @@
     "editor.tabSize": 2
   },
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
   },
   "[markdown]": {
@@ -141,7 +143,7 @@
             "punctuation.definition.block.js",
             "punctuation.definition.binding-pattern.object.js.jsx",
             "meta.jsx.children.js.jsx",
-            "meta.jsx.children.tsx",
+            "meta.jsx.children",
             "meta.arrow.tsx"
           ],
           "settings": {
@@ -155,6 +157,8 @@
             "meta.embedded.expression.js.jsx",
             "punctuation.section.embedded.begin.js.jsx",
             "punctuation.section.embedded.end.js.jsx",
+            "punctuation.section.embedded.begin.js",
+            "punctuation.section.embedded.end.js",
             "punctuation.definition.template-expression.end",
             "punctuation.definition.template-expression.begin",
             "meta.embedded.line.ruby"
@@ -227,17 +231,24 @@
   "explorer.confirmDragAndDrop": false,
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
   "explorer.confirmDelete": false,
   "svelte.language-server.runtime": "/usr/bin/node",
   "java.refactor.renameFromFileExplorer": "autoApply",
   "editor.fontSize": 13,
-  "rust-client.rustupPath": "/home/sean/.asdf/shims/rustup",
+  "rust-client.rustupPath": "/usr/bin/rustup",
   "mypy.dmypyExecutable": "/home/sean/.mypyls/bin/dmypy",
-  "mypy.runUsingActiveInterpreter": true
+  "mypy.runUsingActiveInterpreter": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.includeLanguages": {
+    "html.erb": "html",
+    "erb": "html"
+  }
 }

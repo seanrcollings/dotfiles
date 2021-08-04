@@ -50,7 +50,7 @@ window#waybar {
   color: yellow;
 }
 
-#batter.critical {
+#battery.critical {
   color: red;
 }
 
@@ -82,3 +82,4 @@ window#waybar {
 #tray {
 	margin-right: 5px;
 }
+

@@ -1,49 +1,74 @@
-directories:
-- base: /home/sean/sourcecode
-  subs:
-  - rust
-  - crystal
-  - ComputerScience/*
-  - scripts
-  - atomicjolt
-exec: "code -r {path}"
-include_parent_folder: false
-quicklaunch:
-  ARC:
-    icon: "\uF625"
-    path: /home/sean/sourcecode/arc
-    tags:
-    - "\uF81F python"
-    - project
-  Mugenmonkey:
-    icon: "\uF737"
-    path: ~/mugenmonkey-rails
-    tags:
-    - "\uE7BA react"
-    - "\uE23E ruby"
-    - "\uFBE4 typescript"
-  Qualtrics:
-    icon: "\uFAB4"
-    path: ~/sourcecode/atomicjolt/qualtrics/
-    tags:
-    - "\uE7BA react"
-    - work
-    - "\uE23E ruby"
-  Sway:
-    icon: "\uF2D2"
-    path: ~/.config/sway/config
-    tags:
-    - "\uE615 config"
-  Venture:
-    icon: "\uE771"
-    path: ~/sourcecode/venture
-    tags:
-    - "\uF81F python"
-    - rofi
-rofi:
+args:
   theme: /home/sean/.config/rofi/venture.rasi
-show_files: true
-show_hidden: false
-show_icons: true
-ui_provider: rofi
-use_cache: false
+browse:
+  entries:
+  - base: /home/sean/sourcecode
+    subs:
+    - rust
+    - crystal
+    - ComputerScience/*
+    - scripts
+    - atomicjolt
+    - python
+  exec: ''
+  include_parent_folder: false
+  show_files: true
+  show_hidden: false
+  show_icons: true
+  show_quicklaunch: false
+  use_cache: true
+color_icons: true
+exec: code -r {path}
+quicklaunch:
+  entries:
+    ARC:
+      icon: "\uF192"
+      path: /home/sean/sourcecode/arc
+      tags:
+      - '|py|'
+    CVTech:
+      icon: "\uF192"
+      path: ~/sourcecode/atomicjolt/cvtech-grade-tool
+      tags:
+      - work
+      - '|rb|'
+    Fish:
+      icon: "\uF8DC"
+      path: ~/.config/fish/config.fish
+      tags:
+      - '|fish|'
+      - '|config|'
+    KYL:
+      icon: "\uF192"
+      path: ~/sourcecode/atomicjolt/kyl-new
+      tags:
+      - 'work'
+      - '|js|'
+    Mugenmonkey:
+      icon: "\uF737"
+      path: ~/mugenmonkey-rails
+      tags:
+      - '|rb|'
+      - '|jsx|'
+      - '|ts|'
+    Qualtrics:
+      icon: "\uFAB4"
+      path: ~/sourcecode/atomicjolt/qualtrics/
+      tags:
+      - '|rb|'
+      - '|js|'
+      - '|ts|'
+    Sway:
+      icon: "\uF2D2"
+      path: ~/.config/sway/config
+      tags:
+      - '|config|'
+    Venture:
+      icon: "\uE771"
+      path: ~/sourcecode/venture
+      tags:
+      - '|py|'
+      - rofi
+  exec: ''
+  show_filepath: false
+ui: rofi
