@@ -1,0 +1,37 @@
+#!/usr/bin/bash
+
+power_on() {
+    if bluetoothctl show | grep -q "Powered: yes"; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+status() {
+    if power_on; then
+        echo ""
+    else
+        echo ""
+    fi
+}
+
+toggle_power() {
+	if power_on; then
+		bluetoothctl power off
+	else
+		bluetoothctl power on
+	fi
+}
+
+case $1 in
+	"status")
+		status
+		;;
+	"toggle")
+		toggle_power
+		;;
+	*)
+		;;
+esac
+
