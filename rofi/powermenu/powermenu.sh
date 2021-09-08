@@ -3,12 +3,13 @@
 LOGOUT=""
 LOCK=""
 SLEEP=""
+HIBERNATE=""
 REBOOT=""
 OFF=""
 
 if [ -z "$1" ] 
 then
-	echo -e "$LOCK\n$SLEEP\n$LOGOUT\n$REBOOT\n$OFF"
+	echo -e "$LOCK\n$SLEEP\n$HIBERNATE\n$LOGOUT\n$REBOOT\n$OFF"
 else
 	killall rofi
 	case $1 in
@@ -17,6 +18,9 @@ else
 			;;
 		$LOCK)
 			swaylock
+			;;
+		$HIBERNATE)
+			systemctl hibernate
 			;;
 		$SLEEP)
 			systemctl suspend

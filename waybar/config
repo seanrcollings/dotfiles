@@ -107,9 +107,9 @@
     "tooltip-format": "Bluetooth"
   },
   "custom/scythe": {
-    "exec": "/home/sean/.local/bin/scythe timer:running:waybar",
-    "on-click-right": "/home/sean/.local/bin/scythe timer:stop",
-    "on-click": "alacritty --class floatme --title Pick a Timer -e '/home/sean/.local/bin/scythe timer:start'",
+    "exec": "/home/sean/.asdf/shims/scythe timer:running:waybar",
+    "on-click-right": "/home/sean/.asdf/shims/scythe timer:stop",
+    "on-click": "alacritty --class floatme --title Pick a Timer -e '/home/sean/.asdf/shims/scythe timer:start'",
     "return-type": "json",
     "format": "{}",
     "interval": 5

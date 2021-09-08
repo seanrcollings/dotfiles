@@ -4,12 +4,7 @@ browse:
   entries:
   - base: /home/sean/sourcecode
     subs:
-    - rust
-    - crystal
-    - ComputerScience/*
-    - scripts
     - atomicjolt
-    - python
   exec: ''
   include_parent_folder: false
   show_files: true

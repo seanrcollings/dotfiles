@@ -29,7 +29,7 @@
   },
   "tabnine.experimentalAutoImports": true,
   "editor.renderWhitespace": "none",
-  "editor.fontFamily": "'Droid Sans Mono', 'Noto Color Emoji', 'SauceCodePro Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontFamily": "Fira Code",
   "launch": {
     "configurations": [],
     "compounds": []
@@ -239,7 +239,7 @@
   "java.refactor.renameFromFileExplorer": "autoApply",
   "editor.fontSize": 13,
   "rust-client.rustupPath": "/usr/bin/rustup",
-  "mypy.dmypyExecutable": "/home/sean/.mypyls/bin/dmypy",
+  "mypy.dmypyExecutable": "~/.asdf/shims/dmypy",
   "mypy.runUsingActiveInterpreter": true,
   "security.workspace.trust.untrustedFiles": "open",
   "notebook.cellToolbarLocation": {
@@ -250,5 +250,9 @@
   "emmet.includeLanguages": {
     "html.erb": "html",
     "erb": "html"
-  }
+  },
+  "ruby.useBundler": true,
+  "ruby.linter.executablePath": "/home/sean/.asdf/shims/ruby",
+  "editor.fontLigatures": true,
+  "python.defaultInterpreterPath": "/home/sean/.asdf/shims/python"
 }

@@ -1,7 +1,5 @@
 @import "base"
 
-
-
 * {
 	font: "SauceCodePro Nerd Font 50";
 }
@@ -9,10 +7,13 @@
 window {
 	location: east;
 	width: 160px;
-	height: 539px;
+	height: 646px;
 	border: 3;
-	border-color: @highlight;
 	border-radius: 10px 0px 0px 10px;
+}
+
+element.selected {
+	background-color: #3BC0F0;
 }
 
 inputbar {
