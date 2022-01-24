@@ -5,12 +5,10 @@
   "editor.stablePeek": true,
   "workbench.startupEditor": "newUntitledFile",
   "files.autoSave": "onWindowChange",
-  "sync.autoUpload": true,
   "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.view.pdf.ref.viewer": "tabOrBrowser",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "python.jediEnabled": false,
   "files.exclude": {
     "**/__pycache__": true,
     "**/.classpath": true,
@@ -35,6 +33,7 @@
     "compounds": []
   },
   "python.languageServer": "Pylance",
+  "clang-format.executable": "/usr/bin/clang-format",
 
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features",
@@ -94,7 +93,6 @@
   "python.showStartPage": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "prettier.arrowParens": "avoid",
-  "prettier.disableLanguages": ["django-html"],
   "workbench.editor.enablePreview": false,
   "[json]": {
     "editor.quickSuggestions": {
@@ -108,6 +106,52 @@
   "terminal.external.linuxExec": "termite",
   "prettier.jsxSingleQuote": true,
   "notebook.kernelProviderAssociations": [],
+
+  "ruby.rubocop.suppressRubocopWarnings": true,
+  "editor.semanticHighlighting.enabled": true,
+  "javascript.implicitProjectConfig.checkJs": true,
+  "python.formatting.provider": "black",
+  "files.associations": {
+    "*.jsx": "javascriptreact"
+  },
+  // "ruby.format": "rubocop",
+  // "ruby.lint": {
+  //   "rubocop": {
+  //     "useBundler": true,
+  //     "configFilePath": ".rubocop.yml",
+  //     "forceExclusion": true
+  //   }
+  // },
+  "explorer.confirmDragAndDrop": false,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "explorer.confirmDelete": false,
+  "svelte.language-server.runtime": "/usr/bin/node",
+  "java.refactor.renameFromFileExplorer": "autoApply",
+  "editor.fontSize": 13,
+  "rust-client.rustupPath": "/usr/bin/rustup",
+  "mypy.dmypyExecutable": "~/.asdf/shims/dmypy",
+  "security.workspace.trust.untrustedFiles": "open",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.includeLanguages": {
+    "html.erb": "html",
+    "erb": "html",
+    "aspnetcorerazor": "html"
+  },
+  "omnisharp.monoPath": "/usr/bin/mono",
+  "ruby.useBundler": true,
+  "ruby.linter.executablePath": "/home/sean/.asdf/shims/ruby",
+  "editor.fontLigatures": true,
+  "python.defaultInterpreterPath": "/home/sean/.asdf/shims/python",
+  "redhat.telemetry.enabled": false,
+  "python.linting.pylintArgs": ["--rcfile=.pylintrc"],
   "workbench.colorCustomizations": {
     "[Monokai Gravity]": {
       "peekViewEditor.matchHighlightBackground": "#ffffff00"
@@ -161,7 +205,9 @@
             "punctuation.section.embedded.end.js",
             "punctuation.definition.template-expression.end",
             "punctuation.definition.template-expression.begin",
-            "meta.embedded.line.ruby"
+            "meta.embedded.line.ruby",
+            "punctuation.section.embedded.end.svelte",
+            "punctuation.section.embedded.begin.svelte"
           ],
           "settings": {
             "foreground": "#E13E79"
@@ -213,46 +259,25 @@
       ]
     }
   },
-  "ruby.rubocop.suppressRubocopWarnings": true,
-  "editor.semanticHighlighting.enabled": true,
-  "javascript.implicitProjectConfig.checkJs": true,
-  "python.formatting.provider": "black",
-  "files.associations": {
-    "*.jsx": "javascriptreact"
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
   },
-  "ruby.format": "rubocop",
-  "ruby.lint": {
-    "rubocop": {
-      "useBundler": true,
-      "configFilePath": ".rubocop.yml",
-      "forceExclusion": true
-    }
+  "cmake.configureOnOpen": true,
+  "csharp.semanticHighlighting.enabled": true,
+  "omnisharp.useGlobalMono": "always",
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
   },
-  "explorer.confirmDragAndDrop": false,
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
-  },
-  "explorer.confirmDelete": false,
-  "svelte.language-server.runtime": "/usr/bin/node",
-  "java.refactor.renameFromFileExplorer": "autoApply",
-  "editor.fontSize": 13,
-  "rust-client.rustupPath": "/usr/bin/rustup",
-  "mypy.dmypyExecutable": "~/.asdf/shims/dmypy",
-  "mypy.runUsingActiveInterpreter": true,
-  "security.workspace.trust.untrustedFiles": "open",
-  "notebook.cellToolbarLocation": {
-    "default": "right",
-    "jupyter-notebook": "left"
-  },
-  "emmet.showSuggestionsAsSnippets": true,
-  "emmet.includeLanguages": {
-    "html.erb": "html",
-    "erb": "html"
-  },
-  "ruby.useBundler": true,
-  "ruby.linter.executablePath": "/home/sean/.asdf/shims/ruby",
-  "editor.fontLigatures": true,
-  "python.defaultInterpreterPath": "/home/sean/.asdf/shims/python"
+  "svelte.enable-ts-plugin": true,
+  "python.linting.mypyPath": "/home/sean/.asdf/shims/mypy",
+  "svelte.ask-to-enable-ts-plugin": false,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "❯": true
+  }
 }

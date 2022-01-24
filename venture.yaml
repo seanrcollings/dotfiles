@@ -5,6 +5,9 @@ browse:
   - base: /home/sean/sourcecode
     subs:
     - atomicjolt
+    - atomicjolt/otc
+    - atomicjolt/kyl
+    - school/*
   exec: ''
   include_parent_folder: false
   show_files: true
@@ -21,6 +24,7 @@ quicklaunch:
       path: /home/sean/sourcecode/arc
       tags:
       - '|py|'
+      - project
     CVTech:
       icon: "\uF192"
       path: ~/sourcecode/atomicjolt/cvtech-grade-tool
@@ -35,9 +39,9 @@ quicklaunch:
       - '|config|'
     KYL:
       icon: "\uF192"
-      path: ~/sourcecode/atomicjolt/kyl-new
+      path: ~/sourcecode/atomicjolt/kyl/kyl-new
       tags:
-      - 'work'
+      - work
       - '|js|'
     Mugenmonkey:
       icon: "\uF737"
@@ -46,6 +50,12 @@ quicklaunch:
       - '|rb|'
       - '|jsx|'
       - '|ts|'
+    OTC Broker:
+      icon: "\uF192"
+      path: /home/sean/sourcecode/atomicjolt/otc/johnbaylorbroker
+      tags:
+      - 'csharp'
+      - otc
     Qualtrics:
       icon: "\uFAB4"
       path: ~/sourcecode/atomicjolt/qualtrics/
