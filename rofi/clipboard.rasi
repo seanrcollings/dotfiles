@@ -1,13 +1,100 @@
-@import "base"
+@import "../themes/theme.rasi"
+
+configuration {
+  show-icons: false;
+  font: "Fira Code 15";
+  sidebar-mode: false;
+}
+
+* {
+  background-color: @background;
+  text-color: @text;
+}
 
 window {
-	width: 1500;
-	height: 70%;
+  transparency: "real";
+  border-radius: 12px;
+  location: center;
+  width: 1000px;
+  height: 770px;
+}
+
+entry {
+  expand: true;
+  padding: 10px;
+  background-color: @focused;
+  border-radius: 0px 10px 10px 0px;
+}
+
+
+textbox-custom {
+  expand: false;
+  str: " Clipboard ";
+  background-color: @accent;
+  text-color: @background;
+  padding: 10px 10px 0px 10px;
+  border-radius: 10px 0px 0px 10px;
+  padding: 10px;
+}
+
+num-filtered-rows {
+  expand: false;
+  background-color: @background;
+  text-color: @text;
+  padding: 10px 10px 0px 10px;
+  border-radius: 10px 0px 0px 10px;
+  padding: 10px;
+}
+
+inputbar {
+  children: [ textbox-custom, entry, num-filtered-rows ];
+  spacing: 0px;
+  background-color: @background;
+  text-color: @text;
+  expand: false;
+  border: 0px;
+  border-radius: 0px;
+  border-color: @accent;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
 }
 
 listview {
-	dynamic: false;
+  columns: 1;
+  lines: 1;
+  spacing: 20px;
+  cycle: true;
+  dynamic: true;
+  layout: vertical;
+}
+
+mainbox {
+  background-color: @background;
+  children: [ inputbar, listview ];
+  spacing: 12px;
+  margin: 12px;
+}
+
+element {
+  background-color: @background-light;
+  text-color: @text;
+  orientation: vertical;
+  border-radius: 12px;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  expand: true;
+  vertical-align: 0.5;
+  margin: 19px 15px 19px 15px;
 }
 
 
-
+element selected {
+  background-color: @focused;
+  text-color: @accent;
+  border: 2px;
+  border-radius: 12px;
+  border-color: @accent;
+}

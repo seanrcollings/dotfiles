@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$HOME/.config/rofi/includes.bash"
 
 LOGOUT=""
 LOCK=""
@@ -7,33 +8,30 @@ HIBERNATE=""
 REBOOT=""
 OFF=""
 
-if [ -z "$1" ] 
-then
-	echo -e "$LOCK\n$SLEEP\n$HIBERNATE\n$LOGOUT\n$REBOOT\n$OFF"
-else
-	killall rofi
-	case $1 in
-		$LOGOUT)
-			swaymsg exit
-			;;
-		$LOCK)
-			swaylock
-			;;
-		$HIBERNATE)
-			systemctl hibernate
-			;;
-		$SLEEP)
-			systemctl suspend
-			;;
-		$REBOOT)
-			systemctl reboot
-			;;
-		$OFF)
-			systemctl poweroff
-			;;
-		*)
-			;;
-	esac
-fi
 
+dir=/home/sean/.config/rofi
+result=$(echo -e "$LOCK\n$SLEEP\n$HIBERNATE\n$LOGOUT\n$REBOOT\n$OFF" | \
+	rofi -theme $dir/powermenu/powermenu.rasi -dmenu -p "Up $(uptime -p | cut -c4-)")
 
+case $result in
+	$LOCK)
+		swaylock
+		;;
+	$HIBERNATE)
+		systemctl hibernate
+		;;
+	$SLEEP)
+		systemctl suspend
+		;;
+	$LOGOUT)
+		confirm "swaymsg exit" "" "Exit Sway?"
+		;;
+	$REBOOT)
+		confirm "systemctl reboot" "" "Reboot?"
+		;;
+	$OFF)
+		confirm "systemctl poweroff" "" "Shutdown?"
+		;;
+	*)
+		;;
+esac

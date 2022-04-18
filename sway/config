@@ -9,7 +9,7 @@ exec $scripts/xdg-desktop-fix
 exec $scripts/displays
 
 # Startup the clipboard
-exec wl-paste -n -t text --watch clipman store
+exec wl-paste -n -t text --watch clipman store --max-items=30
 
 # Notifcation Daemon
 exec mako
@@ -87,8 +87,7 @@ set $rofi_home /home/sean/.config/rofi
 
 # Open Power menu
 
-bindsym Control+Mod1+p exec rofi -modi powermenu:$rofi_home/powermenu/powermenu.sh -show powermenu -theme $rofi_home/powermenu/powermenu.rasi
-
+bindsym Control+Mod1+p exec $rofi_home/powermenu/powermenu.sh
 # Projects
 bindsym Control+Mod1+j exec "/home/sean/.asdf/shims/venture run"
 bindsym Control+Mod1+k exec "/home/sean/.asdf/shims/venture quicklaunch"
@@ -97,7 +96,7 @@ bindsym Control+Mod1+k exec "/home/sean/.asdf/shims/venture quicklaunch"
 bindsym $mod+d exec rofi -show drun run -theme apps.rasi
 
 # Open Clipboard
-bindsym Control+Mod1+v exec clipman pick -t rofi --tool-args="-theme clipboard"
+bindsym Control+Mod1+v exec clipman pick -t rofi --tool-args="-theme clipboard" --max-items=30
 
 
 #set $mw '/home/sean/sourcecode/magic-window/.venv/bin/magic-window'

@@ -28,7 +28,7 @@
   },
   "tabnine.experimentalAutoImports": true,
   "editor.renderWhitespace": "none",
-  "editor.fontFamily": "Fira Code",
+  "editor.fontFamily": "Fira Code, SauceCodePro Nerd Font",
   "launch": {
     "configurations": [],
     "compounds": []

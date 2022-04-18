@@ -1,39 +1,108 @@
-@import "base"
+configuration {
+	modi: "drun";
+	show-icons: true;
+	font: "SauceCodePro Nerd Font 20";
+	icon-theme: "Numix Circle";
+}
 
+
+@import "../themes/theme.rasi"
+
+configuration {
+  show-icons: false;
+  font: "Fira Code 15";
+  sidebar-mode: false;
+}
+
+* {
+  background-color: @background;
+  text-color: @text;
+}
 
 window {
-	height: 700px;
+  transparency: "real";
+  border-radius: 12px;
+  location: center;
+  width: 1000px;
+  height: 770px;
+}
+
+entry {
+  expand: true;
+  padding: 12px 10px 0px 10px;
+  background-color: @focused;
+  border-radius: 0px 10px 10px 0px;
+  placeholder: "Search";
+}
+
+textbox-custom {
+  font: "SauceCodePro Nerd Font 20";
+  expand: false;
+  str: "  ";
+  background-color: @accent;
+  text-color: white;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+inputbar {
+  children: [ textbox-custom, entry ];
+  spacing: 0px;
+  background-color: @background;
+  text-color: @text;
+  expand: false;
+  border: 0px;
+  border-radius: 0px;
+  border-color: @accent;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
 }
 
 listview {
-	columns: 3;
-	padding: 20px 70px;
-	spacing: 20px;
+  columns: 3;
+  lines: 3;
+  spacing: 50px;
+  cycle: true;
+  layout: vertical;
+}
+
+mainbox {
+  background-color: @background;
+  children: [ inputbar, listview ];
+  spacing: 12px;
+  margin: 12px;
 }
 
 element {
-	background-color: @backgroundc;	
-	padding: 10px;
-	orientation: vertical;
-	width: 20px;
-}
-
-element-text {
-	color: #eeeeee; 
-	horizontal-align: 0.5;
-	font: "SauceCodePro Nerd Font 14";
+	children: [ element-icon, element-text  ];
+  background-color: @background;
+  text-color: @text;
+  orientation: vertical;
+  border-radius: 12px;
+  expand: false;
 }
 
 element-icon {
-	size: 70px;
+  background-color: @background;
+  text-color: @text;
+  padding: 12px;
+  margin: 0px;
+  border: 0px;
+  size: 3.5em;
 }
 
-element.selected {
-	background-color: white;
-	text-color: black;
-	border-radius: 5px;
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  expand: true;
+  vertical-align: 0.5;
+  horizontal-align: 0.5;
+  margin: 19px 15px 19px 15px;
+  font: "Fira Code 12";
 }
 
-element-text.selected {
-	color: #333;
+element selected, element-icon selected {
+  background-color: @focused;
+  border: 2px;
+  border-radius: 12px;
 }
