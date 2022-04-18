@@ -1,10 +1,15 @@
 @import "base"
 
 window {
-	location: west;
-	height: 100%;
-	width: 20%;
-	border-radius: 0px;
+	location: north;
+	width: 60%;
+	height: 500px;
+	border: 1px;
+	border-color: #3BC0F0;
+}
+
+listview {
+	columns: 3;
 }
 
 element {

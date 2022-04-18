@@ -23,7 +23,8 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "files.trimTrailingWhitespace": true,
   "search.exclude": {
-    "env/**": true
+    "env/**": true,
+    "node_modules": true
   },
   "tabnine.experimentalAutoImports": true,
   "editor.renderWhitespace": "none",
@@ -52,7 +53,7 @@
     "editor.tabSize": 2
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.tabSize": 2
   },
   "[markdown]": {
@@ -92,7 +93,6 @@
   "eslint.format.enable": true,
   "python.showStartPage": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "prettier.arrowParens": "avoid",
   "workbench.editor.enablePreview": false,
   "[json]": {
     "editor.quickSuggestions": {
@@ -103,8 +103,7 @@
   "window.titleBarStyle": "custom",
   "window.customMenuBarAltFocus": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "terminal.external.linuxExec": "termite",
-  "prettier.jsxSingleQuote": true,
+  "terminal.external.linuxExec": "alacritty",
   "notebook.kernelProviderAssociations": [],
 
   "ruby.rubocop.suppressRubocopWarnings": true,
@@ -112,16 +111,17 @@
   "javascript.implicitProjectConfig.checkJs": true,
   "python.formatting.provider": "black",
   "files.associations": {
-    "*.jsx": "javascriptreact"
+    "*.jsx": "javascriptreact",
+    "*.pl": "prolog"
   },
-  // "ruby.format": "rubocop",
-  // "ruby.lint": {
-  //   "rubocop": {
-  //     "useBundler": true,
-  //     "configFilePath": ".rubocop.yml",
-  //     "forceExclusion": true
-  //   }
-  // },
+  "ruby.format": false,
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true,
+      "configFilePath": ".rubocop.yml",
+      "forceExclusion": true
+    }
+  },
   "explorer.confirmDragAndDrop": false,
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
@@ -132,7 +132,7 @@
   "svelte.language-server.runtime": "/usr/bin/node",
   "java.refactor.renameFromFileExplorer": "autoApply",
   "editor.fontSize": 13,
-  "rust-client.rustupPath": "/usr/bin/rustup",
+  "rust-client.rustupPath": "/home/sean/.cargo/bin/rustup",
   "mypy.dmypyExecutable": "~/.asdf/shims/dmypy",
   "security.workspace.trust.untrustedFiles": "open",
   "notebook.cellToolbarLocation": {
@@ -270,14 +270,22 @@
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,
-    "yaml": false,
-    "plaintext": false,
-    "markdown": true
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true,
+    "ruby": false,
+    "javascriptreact": false,
+    "rust": false
   },
   "svelte.enable-ts-plugin": true,
   "python.linting.mypyPath": "/home/sean/.asdf/shims/mypy",
   "svelte.ask-to-enable-ts-plugin": false,
   "editor.unicodeHighlight.allowedCharacters": {
     "❯": true
-  }
+  },
+  "terminal.explorerKind": "external",
+  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
+  "julia.symbolCacheDownload": true,
+  "julia.enableTelemetry": false,
+  "julia.executablePath": "/home/sean/.asdf/shims/julia"
 }

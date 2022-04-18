@@ -1,29 +1,54 @@
+@define-color text-color #BBC3C8;
+@define-color d-black    #000000;
+@define-color d-red      #ff5555;
+@define-color d-green    #50fa7b;
+@define-color d-yellow   #f1fa8c;
+@define-color d-blue     #bd93f9;
+@define-color d-magenta  #ff79c6;
+@define-color d-cyan     #8be9fd;
+@define-color d-white    #bfbfbf;
+@define-color db-black   #4d4d4d;
+@define-color db-red     #ff6e67;
+@define-color db-green   #5af78e;
+@define-color db-yellow  #f4f99d;
+@define-color db-blue    #caa9fa;
+@define-color db-magenta #ff92d0;
+@define-color db-cyan    #9aedfe;
+@define-color db-white   #e6e6e6;
+
 * {
-  color: #fffeee;
+  color: @text-color; 
   font-size: 16px;
 }
 
+
 window#waybar {
-  font-family: Roboto, "SauceCodePro Nerd Font", sans-serif;
-  background-color: #1d1f28;
+  font-family: "Fira Code", "SauceCodePro Nerd Font", sans-serif;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+window > box {
+	margin: 10px;
+	background-color: #1d1f28; 
+	border-radius: 10px;
+	padding: 0px 5px;
 }
 
 #workspaces {
-  font-family: "Font Awesome 5 Free Solid", "Font Awesome 5 Brands", sans-serif;
+  font-family: "Fira Code", "Font Awesome 6 Free Solid", "Font Awesome 6 Brands", sans-serif;
   font-weight: 600;
 }
 
 #workspaces button {
   padding: 5px 10px;
   background: transparent;
-  color: white;
-  border-bottom: 3px solid transparent;
+  border-bottom: 1px solid transparent;
   border-radius: 0px;
 }
 
 #workspaces button.focused {
-  background: #64727d;
-  border-bottom: 3px solid white;
+  border-bottom: 1px solid @text-color;
 }
 
 #workspaces button.urgent {
@@ -31,10 +56,10 @@ window#waybar {
 }
 
 #mode {
-  margin-left: 10px;
+  margin: 5px 10px;
   border-radius: 4px;
   border: 1px solid #333;
-  padding: 0px 5px;
+  padding: 1px 5px;
 }
 
 #pulseaudio,
@@ -43,27 +68,56 @@ window#waybar {
 #network {
   padding: 0 10px;
   margin: 0 5px;
-  border-bottom: 2px white solid;
+  border-bottom: 2px @text-color solid;
+}
+
+
+
+#battery { 
+	color: @text-color; 
+} 
+
+#battery.charging {
+	color: @d-green;
 }
 
 #battery.warning {
-  color: yellow;
+  color: @d-yellow;
 }
 
 #battery.critical {
-  color: red;
+  color: @db-red;
 }
 
-#idle_inhibitor,
-#custom-bluetooth {
+#network {
+	padding: 0px 10px 0px 5px;
+	margin: 0px;
+}
+
+#idle_inhibitor {
   padding: 0px 10px;
   margin: 5px 0px;
+  padding-right: 15px;
   border-radius: 5px;
   transition: 0.3s ease;
   background-color: transparent;
+  color: grey;
 }
 
-#custom-scythe {
+#idle_inhibitor.activated {
+  color: @d-cyan;
+  background-color: rgba(0, 0, 0, 0.534);
+}
+
+#custom-bluetooth {
+	padding: 0px 10px; 
+  	margin: 0px 3px;
+	color: #007FF5;
+	font-size: 18px;
+	border-bottom: 2px solid @text-color;
+}
+
+#custom-scythe.inactive {
 }
 
 #custom-scythe.active {
@@ -75,11 +129,27 @@ window#waybar {
   border: 1px solid rgb(236, 236, 236);
 }
 
-#idle_inhibitor.activated {
-  background-color: rgba(0, 0, 0, 0.534);
-}
-
 #tray {
 	margin-right: 5px;
 }
 
+#tray > .active {
+	opacity: .7;
+}
+
+#tray > .needs-attention {
+	opacity: 1;
+}
+
+#custom-launcher {
+	font-size: 20px;
+	margin-left: 5px;
+	padding-right: 5px;
+}
+
+#custom-recorder {
+	font-size: 18px;
+	margin: 2px 7px 0px 7px;
+	color:#c9545d;
+}
+		

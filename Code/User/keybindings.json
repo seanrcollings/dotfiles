@@ -1,7 +1,16 @@
-// Empty
 [
-    {
-        "key": "alt+m",
-        "command": "workbench.action.toggleMenuBar"
-    }
+  {
+    "key": "alt+m",
+    "command": "workbench.action.toggleMenuBar"
+  },
+  {
+    "key": "tab",
+    "command": "markdown.extension.onTabKey",
+    "when": "editorTextFocus && !inlineSuggestionVisible && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !suggestWidgetVisible && editorLangId == 'markdown'"
+  },
+  {
+    "key": "tab",
+    "command": "-markdown.extension.onTabKey",
+    "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !suggestWidgetVisible && editorLangId == 'markdown'"
+  }
 ]

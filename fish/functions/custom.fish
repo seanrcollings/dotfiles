@@ -63,3 +63,8 @@ function record
     end
     wf-recorder -g (slurp) --file=/home/sean/Videos/Captures/$name.mp4
 end
+
+function zth
+    zathura $argv &
+    disown
+end

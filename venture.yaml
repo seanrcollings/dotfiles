@@ -43,6 +43,13 @@ quicklaunch:
       tags:
       - work
       - '|js|'
+    Learnosity:
+      icon: "\uF192"
+      path: /home/sean/sourcecode/atomicjolt/learnosity/
+      tags:
+      - '|js|'
+      - '|rb|'
+      - work
     Mugenmonkey:
       icon: "\uF737"
       path: ~/mugenmonkey-rails
@@ -54,8 +61,9 @@ quicklaunch:
       icon: "\uF192"
       path: /home/sean/sourcecode/atomicjolt/otc/johnbaylorbroker
       tags:
-      - 'csharp'
+      - csharp
       - otc
+      - work
     Qualtrics:
       icon: "\uFAB4"
       path: ~/sourcecode/atomicjolt/qualtrics/

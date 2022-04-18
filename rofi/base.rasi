@@ -12,21 +12,28 @@ window {
   width: 1000px;
   height: 600px;
   text-color: var(text);
+  border: 1px;
+  border-color: @highlight;
 }
 
 mainbox {
-	background-color: inherit;	
+	background-color: inherit;
 }
 
 listview {
-	background-color: inherit;	
+	background-color: inherit;
 }
 
 element {
 	color: white;
-	background-color: var(backgroundc);	
+	background-color: var(backgroundc);
 	padding: 10px;
 	orientation: horizontal;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
 }
 
 element-icon {

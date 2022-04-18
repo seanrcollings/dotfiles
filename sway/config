@@ -3,9 +3,10 @@
 ################################################
 set $mod Mod4
 set $background /home/sean/Pictures/wallpapers/outer_wilds_2.png
+set $scripts /home/sean/.config/sway/scripts
 
-exec /home/sean/.config/sway/scripts/xdg-desktop-fix
-exec /home/sean/.config/sway/scripts/displays
+exec $scripts/xdg-desktop-fix
+exec $scripts/displays
 
 # Startup the clipboard
 exec wl-paste -n -t text --watch clipman store
@@ -70,7 +71,7 @@ bindsym Alt+Print exec grim -g "$(slurp -d)" $(xdg-user-dir PICTURES)/Screenshot
 bindsym Control+Alt+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim_display.png')
 
 # Recording
-#bindsym Control+Mod1+R exec "wf-recorder -g "$(slurp -d)" $(xdg-user-dir VIDEOS)/Captures/$(date +'%s_wf.mp4')""
+bindsym Control+Mod1+R exec $scripts/record.bash
 
 # lock the screen
 bindsym Control+Mod1+l exec "swaylock"
@@ -89,7 +90,7 @@ set $rofi_home /home/sean/.config/rofi
 bindsym Control+Mod1+p exec rofi -modi powermenu:$rofi_home/powermenu/powermenu.sh -show powermenu -theme $rofi_home/powermenu/powermenu.rasi
 
 # Projects
-bindsym Control+Mod1+j exec "/home/sean/.asdf/shims/venture"
+bindsym Control+Mod1+j exec "/home/sean/.asdf/shims/venture run"
 bindsym Control+Mod1+k exec "/home/sean/.asdf/shims/venture quicklaunch"
 
 # Open applications menu
@@ -99,32 +100,31 @@ bindsym $mod+d exec rofi -show drun run -theme apps.rasi
 bindsym Control+Mod1+v exec clipman pick -t rofi --tool-args="-theme clipboard"
 
 
-set $mw '/home/sean/sourcecode/magic-window/.venv/bin/magic-window'
-bindsym $mod+bracketleft exec $mw pick
-bindsym $mod+bracketright exec $mw toggle
+#set $mw '/home/sean/sourcecode/magic-window/.venv/bin/magic-window'
+#bindsym $mod+bracketleft exec $mw pick
+#bindsym $mod+bracketright exec $mw toggle
 
 ################################################
 ################## APPEARANCE ##################
 ################################################
 # Font for window titles.
-font pango:Roboto 15
+font pango:SauceCode Pro 12
 #titlebar_border_thickness
 
-#3BC0F0
-#4C7899
-# class                  border   backgr.  text     indicator child_border
-client.focused           #333333  #2f2f2f  #ffffff  #5f676a   #3BC0F0
-client.focused_inactive  #1b1b1b  #2a2a2a  #ffffff  #222222   #222222
-client.unfocused         #1b1b1b  #222222  #888888  #222222   #222222
-client.urgent            #2f343a  #444444  #ffffff  #900000   #900000
-client.placeholder       #d64937  #444444  #ffffff  #000000   #0c0c0c
+# class                  border   backgr   text     indicator child_border
+client.focused           #333333  #1d1f28  #BBC3C8  #5f676a   #3BC0F0
+client.focused_inactive  #1b1b1b  #12141a  #BBC3C8  #222222   #222222
+client.unfocused         #1b1b1b  #12141a  #BBC3C8  #222222   #222222
+client.urgent            #2f343a  #444444  #BBC3C8  #900000   #900000
+client.placeholder       #d64937  #444444  #BBC3C8  #000000   #0c0c0c
 
 default_border pixel 2
-gaps inner 5
-gaps outer 5
+gaps top   5
+gaps inner 10
+gaps outer 10
 hide_edge_borders smart_no_gaps
 
-#set $rounded /home/sean/.config/sway/rounded.png
+#set $rounded /home/sean/.config/sway/testing.png
 #border_images.focused $rounded
 #border_images.focused_inactive $rounded
 #border_images.unfocused $rounded
@@ -193,6 +193,10 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+# Focus monitors
+bindsym $mod+bracketleft exec focus output left
+bindsym $mod+bracketright exec focus output right
 
 # split in horizontal orientation
 bindsym $mod+h split h
