@@ -84,7 +84,8 @@
     "tooltip-format": "{ifname}",
     "tooltip-format-wifi": "{essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "{ifname} ",
-    "tooltip-format-disconnected": "Disconnected"
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "/home/sean/.config/rofi/wifi/wifi.sh"
   },
   "wlr/taskbar": {
     "format": "{icon}",

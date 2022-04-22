@@ -98,6 +98,11 @@ bindsym $mod+d exec rofi -show drun run -theme apps.rasi
 # Open Clipboard
 bindsym Control+Mod1+v exec clipman pick -t rofi --tool-args="-theme clipboard" --max-items=30
 
+# Open Common Apps
+bindsym Control+Mod1+a exec $rofi_home/apps-launcher/apps-launcher.sh
+
+# Open Common Sites
+bindsym Control+Mod1+w exec $rofi_home/sites-launcher/sites-launcher.sh
 
 #set $mw '/home/sean/sourcecode/magic-window/.venv/bin/magic-window'
 #bindsym $mod+bracketleft exec $mw pick
