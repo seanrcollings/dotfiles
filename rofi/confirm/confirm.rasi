@@ -1,0 +1,90 @@
+@import "../themes/theme.rasi"
+
+configuration {
+  show-icons: false;
+  font: "Fira Code 15";
+  disable-history: false;
+  sidebar-mode: false;
+}
+
+* {
+  background-color: @background;
+  text-color: @text;
+}
+
+window {
+  transparency: "real";
+  border-radius: 12px;
+  location: center;
+  width: 300px;
+}
+
+prompt {
+  enabled: true;
+  padding: 10px;
+  text-color: @accent;
+  expand: true;
+  horizontal-align: 0.5;
+}
+
+inputbar {
+  children: [ prompt ];
+  spacing: 0px;
+  background-color: @background;
+  text-color: @text;
+  expand: false;
+  border: 0px;
+  border-radius: 0px;
+  border-color: @accent;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+}
+
+listview {
+  columns: 2;
+  lines: 1;
+  spacing: 12px;
+  cycle: true;
+  dynamic: true;
+  layout: vertical;
+}
+
+mainbox {
+  background-color: @background;
+  children: [ inputbar, listview ];
+  spacing: 12px;
+  margin: 12px;
+}
+
+element {
+  background-color: @background-light;
+  text-color: @text;
+  orientation: vertical;
+  border-radius: 12px;
+  border-color: @focused;
+  border: 2px;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  font: "SauceCodePro Nerd Font 20";
+  expand: true;
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+  margin: 19px 10px 19px 10px;
+}
+
+element normal.active,
+element alternate.active {
+  background-color: @focused;
+  text-color: @background;
+}
+
+element selected {
+  background-color: @focused;
+  text-color: @accent;
+  border: 2px;
+  border-radius: 12px;
+  border-color: @accent;
+}

@@ -1,0 +1,11 @@
+@import "../shared/widgets.rasi"
+
+window {
+  location: southeast;
+  x-offset: -20px;
+  y-offset: -20px;
+}
+
+textbox-custom {
+  str: " Apps ";
+}

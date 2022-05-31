@@ -1,0 +1,91 @@
+@import "../themes/theme.rasi"
+
+
+configuration {
+  show-icons: false;
+  font: "Fira Code 15";
+  sidebar-mode: false;
+}
+
+* {
+  background-color: @background;
+  text-color: @text;
+}
+
+window {
+  transparency: "real";
+  border-radius: 12px;
+  location: northeast;
+  width: 560px;
+  height: 600px;
+  x-offset: -20px;
+}
+
+entry {
+  expand: true;
+  padding: 12px 10px 0px 10px;
+  background-color: @focused;
+  border-radius: 0px 10px 10px 0px;
+  placeholder: "Search";
+}
+
+textbox-custom {
+  font: "SauceCodePro Nerd Font 20";
+  expand: false;
+  str: " ";
+  background-color: @accent;
+  text-color: white;
+  padding: 10px 10px 10px 15px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+inputbar {
+  children: [ textbox-custom, entry ];
+  spacing: 0px;
+  background-color: @background;
+  text-color: @text;
+  expand: false;
+  border: 0px;
+  border-radius: 0px;
+  border-color: @accent;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+}
+
+listview {
+  columns: 1;
+  lines: 8;
+  cycle: true;
+  layout: vertical;
+}
+
+mainbox {
+  background-color: @background;
+  children: [ inputbar, listview ];
+  spacing: 12px;
+  margin: 12px;
+}
+
+element {
+	children: [ element-icon, element-text ];
+  background-color: @background;
+  text-color: @text;
+  orientation: vertical;
+  border-radius: 12px;
+  expand: false;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  expand: true;
+  vertical-align: 0.5;
+  margin: 10px;
+  font: "Fira Code 12";
+}
+
+element selected, element-icon selected {
+  background-color: @focused;
+  border: 2px;
+  border-radius: 12px;
+}
