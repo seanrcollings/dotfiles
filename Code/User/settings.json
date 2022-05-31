@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Monokai Gravity",
+  "workbench.colorTheme": "Orion",
   "workbench.iconTheme": "material-icon-theme",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.stablePeek": true,
@@ -159,106 +159,6 @@
     }
   },
 
-  "editor.semanticTokenColorCustomizations": {
-    "enabled": true,
-    "[Monokai Gravity]": {
-      "rules": {
-        "function": {
-          "foreground": "#3BC0F0"
-        },
-        "function.declaration": {
-          "foreground": "#a4c267"
-        }
-      }
-    }
-  },
-
-  "editor.tokenColorCustomizations": {
-    "[Monokai Gravity]": {
-      "textMateRules": [
-        {
-          "scope": ["variable.other.constant"],
-          "settings": {
-            "foreground": "#BE84FF"
-          }
-        },
-        {
-          "scope": [
-            "punctuation.definition.block.js",
-            "punctuation.definition.binding-pattern.object.js.jsx",
-            "meta.jsx.children.js.jsx",
-            "meta.jsx.children",
-            "meta.arrow.tsx"
-          ],
-          "settings": {
-            "foreground": "#EEEEEE"
-          }
-        },
-        {
-          "scope": [
-            "punctuation.section.embedded.begin.tsx",
-            "punctuation.section.embedded.end.tsx",
-            "meta.embedded.expression.js.jsx",
-            "punctuation.section.embedded.begin.js.jsx",
-            "punctuation.section.embedded.end.js.jsx",
-            "punctuation.section.embedded.begin.js",
-            "punctuation.section.embedded.end.js",
-            "punctuation.definition.template-expression.end",
-            "punctuation.definition.template-expression.begin",
-            "meta.embedded.line.ruby",
-            "punctuation.section.embedded.end.svelte",
-            "punctuation.section.embedded.begin.svelte"
-          ],
-          "settings": {
-            "foreground": "#E13E79"
-          }
-        },
-        {
-          "scope": "support.class.component.js.jsx",
-          "settings": {
-            "foreground": "#66D9EF"
-          }
-        },
-        {
-          "scope": "variable.language.this",
-          "settings": {
-            "foreground": "#dc9138"
-          }
-        },
-        {
-          "scope": [
-            "punctuation.definition.string.end.ruby",
-            "punctuation.definition.string.begin.ruby"
-          ],
-          "settings": {
-            "foreground": "#E5B567"
-          }
-        },
-        {
-          "scope": ["support.class", "support.class.ruby"],
-          "settings": {
-            "foreground": "#66D9EF",
-            "fontStyle": "italic"
-          }
-        },
-        {
-          "scope": ["support.function"],
-          "settings": {
-            "foreground": "#66D9EF"
-          }
-        },
-        {
-          "scope": [
-            "variable.language.self.ruby",
-            "variable.parameter.function.language.special.self.python"
-          ],
-          "settings": {
-            "foreground": "#FD971F"
-          }
-        }
-      ]
-    }
-  },
   "[cpp]": {
     "editor.defaultFormatter": "xaver.clang-format"
   },
@@ -275,7 +175,9 @@
     "markdown": true,
     "ruby": false,
     "javascriptreact": false,
-    "rust": false
+    "rust": false,
+    "javascript": false,
+    "typescript": false
   },
   "svelte.enable-ts-plugin": true,
   "python.linting.mypyPath": "/home/sean/.asdf/shims/mypy",
@@ -287,5 +189,7 @@
   "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
   "julia.symbolCacheDownload": true,
   "julia.enableTelemetry": false,
-  "julia.executablePath": "/home/sean/.asdf/shims/julia"
+  "julia.executablePath": "/home/sean/.asdf/shims/julia",
+  "window.menuBarVisibility": "compact",
+  "editor.bracketPairColorization.enabled": false
 }

@@ -143,6 +143,7 @@ for_window [class="Gnome-screenshot"] floating enable
 for_window [title="Volume Control"] floating enable
 for_window [app_id="imv"] floating enable
 for_window [class="zoom"] floating enable
+for_window [class="Bitwarden"] floating enable
 
 ################################################
 #################### INPUT  ####################
