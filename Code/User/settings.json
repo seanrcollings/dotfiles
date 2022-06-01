@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Orion",
+  "workbench.colorTheme": "Monokai Gravity",
   "workbench.iconTheme": "material-icon-theme",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.stablePeek": true,
@@ -154,8 +154,118 @@
   "python.linting.pylintArgs": ["--rcfile=.pylintrc"],
   "workbench.colorCustomizations": {
     "[Monokai Gravity]": {
-      "peekViewEditor.matchHighlightBackground": "#ffffff00"
+      "editor.background": "#252525",
+      "editor.foreground": "#dddddd",
+      "editor.lineHighlightBackground": "#2d2d2d",
+      "editor.selectionBackground": "#333",
+      "editorCursor.foreground": "#6eadd5",
+      "editorIndentGuide.activeBackground": "#6b8595",
+      "editorWhitespace.foreground": "#3e3e3e",
+      "peekViewEditor.matchHighlightBackground": "#ffffff00",
+      "activityBar.background": "#202020",
+      "titleBar.activeBackground": "#2e2e2e",
+      "titleBar.inactiveBackground": "#202020",
+      "sideBar.background": "#222222"
       // "peekViewEditor.background": "#ff0000"
+    }
+  },
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "[Monokai Gravity]": {
+      "rules": {
+        "function": {
+          "foreground": "#3BC0F0"
+        },
+        "function.declaration": {
+          "foreground": "#a4c267"
+        }
+      }
+    }
+  },
+  "editor.tokenColorCustomizations": {
+    "[Monokai Gravity]": {
+      "textMateRules": [
+        {
+          "scope": ["variable.other.constant"],
+          "settings": {
+            "foreground": "#BE84FF"
+          }
+        },
+        {
+          "scope": [
+            "punctuation.definition.block.js",
+            "punctuation.definition.binding-pattern.object.js.jsx",
+            "meta.jsx.children.js.jsx",
+            "meta.jsx.children",
+            "meta.arrow.tsx"
+          ],
+          "settings": {
+            "foreground": "#EEEEEE"
+          }
+        },
+        {
+          "scope": [
+            "punctuation.section.embedded.begin.tsx",
+            "punctuation.section.embedded.end.tsx",
+            "meta.embedded.expression.js.jsx",
+            "punctuation.section.embedded.begin.js.jsx",
+            "punctuation.section.embedded.end.js.jsx",
+            "punctuation.section.embedded.begin.js",
+            "punctuation.section.embedded.end.js",
+            "punctuation.definition.template-expression.end",
+            "punctuation.definition.template-expression.begin",
+            "meta.embedded.line.ruby",
+            "punctuation.section.embedded.end.svelte",
+            "punctuation.section.embedded.begin.svelte"
+          ],
+          "settings": {
+            "foreground": "#E13E79"
+          }
+        },
+        {
+          "scope": "support.class.component.js.jsx",
+          "settings": {
+            "foreground": "#66D9EF"
+          }
+        },
+        {
+          "scope": "variable.language.this",
+          "settings": {
+            "foreground": "#dc9138"
+          }
+        },
+        {
+          "scope": [
+            "punctuation.definition.string.end.ruby",
+            "punctuation.definition.string.begin.ruby"
+          ],
+          "settings": {
+            "foreground": "#E5B567"
+          }
+        },
+        {
+          "scope": ["support.class", "support.class.ruby"],
+          "settings": {
+            "foreground": "#66D9EF",
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": ["support.function"],
+          "settings": {
+            "foreground": "#66D9EF"
+          }
+        },
+        {
+          "scope": [
+            "variable.language.self.ruby",
+            "variable.parameter.function.language.special.self.python"
+          ],
+          "settings": {
+            "foreground": "#FD971F"
+          }
+        }
+      ]
     }
   },
 
