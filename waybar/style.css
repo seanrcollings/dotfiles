@@ -3,7 +3,7 @@
 @define-color d-red      #ff5555;
 @define-color d-green    #50fa7b;
 @define-color d-yellow   #f1fa8c;
-@define-color d-blue     #bd93f9;
+@define-color d-blue     #3BC0F0;
 @define-color d-magenta  #ff79c6;
 @define-color d-cyan     #8be9fd;
 @define-color d-white    #bfbfbf;
@@ -17,44 +17,47 @@
 @define-color db-white   #e6e6e6;
 
 @define-color d-background #222222;
+@define-color d-group-bkg rgba(0, 0, 0, 0.445);
 
 * {
-  color: @text-color; 
+  color: @text-color;
   font-size: 16px;
 }
 
-
 window#waybar {
   font-family: "Fira Code", "SauceCodePro Nerd Font", sans-serif;
-  background-color: transparent;
-  border-radius: 5px;
+  background-color: @d-background;
+  border-radius: 0px 0px 10px 10px;
 }
 
 window > box {
-	margin: 10px;
-	background-color: @d-background; 
-	border-radius: 10px;
-	padding: 0px 5px;
+  background-color: @d-background;
+  /* padding: 0px 5px; */
+  border-radius: 0px 0px 10px 10px;
 }
 
+/* LEFT MODULES */
 #workspaces {
-  font-family: "Fira Code", "Font Awesome 6 Free Solid", "Font Awesome 6 Brands", sans-serif;
+  font-family: "Fira Code", "Font Awesome 6 Free Solid", "Font Awesome 6 Brands",
+    sans-serif;
   font-weight: 600;
 }
 
 #workspaces button {
-  padding: 5px 10px;
+  padding: 10px 10px;
   background: transparent;
-  border-bottom: 1px solid transparent;
+  border: 0;
   border-radius: 0px;
+  border-bottom: 3px solid rgb(71, 71, 71);
 }
 
 #workspaces button.focused {
-  border-bottom: 1px solid @text-color;
+  border-bottom: 3px solid @d-blue;
+  background-color: @d-group-bkg;
 }
 
 #workspaces button.urgent {
-	background: #4C7899;
+  background: #12619c;
 }
 
 #mode {
@@ -64,23 +67,53 @@ window > box {
   padding: 1px 5px;
 }
 
+/* RIGHT MDOULES */
+
 #pulseaudio,
 #battery,
+#network,
+#custom-bluetooth,
 #clock,
-#network {
-  padding: 0 10px;
-  margin: 0 5px;
-  border-bottom: 2px @text-color solid;
+#custom-weather,
+#custom-scythe.active {
+  background-color: @d-group-bkg;
+  padding: 0px 10px;
+  margin: 5px 0px;
 }
 
+/*  Left Side "Module" Edges */
+#custom-bluetooth,
+#custom-weather,
+#custom-scythe.active,
+#idle_inhibitor {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
 
+/* Right Side "Module" Edges */
+#clock,
+#battery,
+#custom-scythe.active,
+#idle_inhibitor {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-right: 5px;
+}
 
-#battery { 
-	color: @text-color; 
-} 
+#network {
+  padding-left: 5px;
+}
+
+#custom-bluetooth {
+  color: #007ff5;
+}
+
+#battery {
+  color: @text-color;
+}
 
 #battery.charging {
-	color: @d-green;
+  color: @d-green;
 }
 
 #battery.warning {
@@ -91,16 +124,10 @@ window > box {
   color: @db-red;
 }
 
-#network {
-	padding: 0px 10px 0px 5px;
-	margin: 0px;
-}
-
 #idle_inhibitor {
   padding: 0px 10px;
-  margin: 5px 0px;
+  margin: 5px;
   padding-right: 15px;
-  border-radius: 5px;
   transition: 0.3s ease;
   background-color: transparent;
   color: grey;
@@ -108,51 +135,32 @@ window > box {
 
 #idle_inhibitor.activated {
   color: @d-cyan;
-  background-color: rgba(0, 0, 0, 0.534);
-}
-
-#custom-bluetooth {
-	padding: 0px 10px; 
-  	margin: 0px 3px;
-	color: #007FF5;
-	font-size: 18px;
-	border-bottom: 2px solid @text-color;
-}
-
-#custom-scythe.inactive {
-    color: @text-color;
-}
-
-#custom-scythe.active {
-  background-color: rgb(236, 236, 236);
-  color: #333;
-  padding-right: 3px;
-  margin: 5px;
-  border-radius: 2px;
-  border: 1px solid rgb(236, 236, 236);
+  background-color: @d-group-bkg;
 }
 
 #tray {
-	margin-right: 5px;
+  margin-right: 5px;
 }
 
 #tray > .active {
-	opacity: .7;
+  opacity: 0.7;
 }
 
 #tray > .needs-attention {
-	opacity: 1;
-}
-
-#custom-launcher {
-	font-size: 20px;
-	margin-left: 5px;
-	padding-right: 5px;
+  opacity: 1;
 }
 
 #custom-recorder {
-	font-size: 18px;
-	margin: 2px 7px 0px 7px;
-	color:#c9545d;
+  font-size: 18px;
+  margin: 2px 7px 0px 7px;
+  color: #c9545d;
 }
-		
+
+#custom-launcher {
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 15px;
+  opacity: 1;
+  border-bottom: 3px solid rgb(71, 71, 71);
+  border-bottom-left-radius: 5px;
+}
