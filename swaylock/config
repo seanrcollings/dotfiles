@@ -1,12 +1,11 @@
 ignore-empty-password
-font=Roboto
+font="Fira Code"
 
 clock
 timestr=%R
 datestr=%a, %e of %B
 
-image=~/Pictures/wallpapers/outer_wilds_2.png
-
+screenshots
 fade-in=0.2
 
 effect-blur=30x2
@@ -14,7 +13,7 @@ effect-scale=0.1
 
 indicator
 indicator-radius=140
-indicator-thickness=15
+indicator-thickness=10
 indicator-caps-lock
 
 key-hl-color=3BC0F0
