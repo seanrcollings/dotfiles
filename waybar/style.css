@@ -67,13 +67,15 @@ window > box {
   padding: 1px 5px;
 }
 
-/* RIGHT MDOULES */
+/* RIGHT MODULES */
 
 #pulseaudio,
 #battery,
 #network,
 #custom-bluetooth,
 #clock,
+#cpu,
+#memory,
 #custom-weather,
 #custom-scythe.active {
   background-color: @d-group-bkg;
@@ -84,6 +86,7 @@ window > box {
 /*  Left Side "Module" Edges */
 #custom-bluetooth,
 #custom-weather,
+#cpu,
 #custom-scythe.active,
 #idle_inhibitor {
   border-top-left-radius: 5px;
@@ -93,6 +96,7 @@ window > box {
 /* Right Side "Module" Edges */
 #clock,
 #battery,
+#memory,
 #custom-scythe.active,
 #idle_inhibitor {
   border-top-right-radius: 5px;
