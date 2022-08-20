@@ -1,6 +1,6 @@
 
 format = """
-$username\
+[┌](bold #3BC0F0)$username\
 $hostname\
 $shlvl\
 $jobs\
@@ -9,9 +9,11 @@ $git_branch\
 $git_status\
 $git_state\
 $package\
-$python\
-$character
+$python
+[└─](bold #3BC0F0)$character
 """
+
+
 
 [character]
 success_symbol = "[λ❯](bold #3BC0F0)"

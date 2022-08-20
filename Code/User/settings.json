@@ -193,6 +193,12 @@
     "enabled": true,
     "[Monokai Gravity]": {
       "rules": {
+        "*.mutable": {
+          "underline": false
+        },
+        "enumMember.defaultLibrary": {
+          "foreground": "#66D9EF"
+        },
         "function": {
           "foreground": "#3BC0F0"
         },
@@ -323,5 +329,14 @@
   "julia.executablePath": "/home/sean/.asdf/shims/julia",
   "window.menuBarVisibility": "compact",
   "editor.bracketPairColorization.enabled": false,
-  "python.formatting.blackPath": "/home/sean/.asdf/shims/black"
+  "python.formatting.blackPath": "/home/sean/.asdf/shims/black",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
+  "tailwindCSS.includeLanguages": {
+    "typescriptreact": "html"
+  },
+  "files.watcherExclude": {
+    "**/.venv/**": true
+  },
+  "rust-analyzer.inlayHints.typeHints.enable": false
 }

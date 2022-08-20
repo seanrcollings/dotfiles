@@ -56,7 +56,7 @@ bindsym $mod+Return exec alacritty
 bindsym Mod1+o exec obsidian 
 
 # Open Chrome
-bindsym Mod1+c exec google-chrome-stable
+bindsym Mod1+c exec firefox
 bindsym Ctrl+Mod1+c exec "killall chrome && google-chrome-stable"
 
 # Open VS Code
@@ -144,6 +144,9 @@ for_window [title="Volume Control"] floating enable
 for_window [app_id="imv"] floating enable
 for_window [class="zoom"] floating enable
 for_window [class="Bitwarden"] floating enable
+for_window [app_id="firefox" title="Firefox - Sharing Indicator"] {
+  kill
+}
 
 ################################################
 #################### INPUT  ####################
@@ -173,7 +176,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 floating_modifier $mod
 
 # kill focused window
-bindsym $mod+Shift+q kill
+# bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # change focus
 bindsym $mod+j focus left
@@ -230,7 +234,7 @@ floating_modifier Mod1
 bindsym $mod+a focus parent
 
 # focus the child container
-bindsym $mod+q focus child
+# bindsym $mod+q focus child
 
 ################# WORKSPACES #################
 
