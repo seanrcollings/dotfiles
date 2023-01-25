@@ -40,3 +40,4 @@ function ef
     end
 end
 
+alias ssh="env TERM=xterm ssh $argv"

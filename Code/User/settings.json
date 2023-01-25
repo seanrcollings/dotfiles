@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Monokai Gravity",
+  "workbench.colorTheme": "One Monokai",
   "workbench.iconTheme": "material-icon-theme",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.stablePeek": true,
@@ -104,6 +104,9 @@
     },
     "editor.suggest.insertMode": "replace"
   },
+  "vim.handleKeys": {
+    "<C-w>": false
+  },
   "window.titleBarStyle": "custom",
   "window.customMenuBarAltFocus": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -163,7 +166,8 @@
   "emmet.includeLanguages": {
     "html.erb": "html",
     "erb": "html",
-    "aspnetcorerazor": "html"
+    "aspnetcorerazor": "html",
+    "postcss": "css"
   },
   "omnisharp.monoPath": "/usr/bin/mono",
   "ruby.useBundler": true,
@@ -193,18 +197,18 @@
     "enabled": true,
     "[Monokai Gravity]": {
       "rules": {
-        "*.mutable": {
-          "underline": false
-        },
-        "enumMember.defaultLibrary": {
-          "foreground": "#66D9EF"
-        },
         "function": {
           "foreground": "#3BC0F0"
         },
         "function.declaration": {
           "foreground": "#a4c267"
         }
+      }
+    },
+    "[One Monokai]": {
+      "rules": {
+        "module": "#98C379",
+        "function": "#3BC0F0"
       }
     }
   },
@@ -330,13 +334,13 @@
   "window.menuBarVisibility": "compact",
   "editor.bracketPairColorization.enabled": false,
   "python.formatting.blackPath": "/home/sean/.asdf/shims/black",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoImportUserSymbols": true,
   "python.analysis.inlayHints.functionReturnTypes": true,
-  "rust-analyzer.inlayHints.chainingHints.enable": false,
-  "tailwindCSS.includeLanguages": {
-    "typescriptreact": "html"
-  },
-  "files.watcherExclude": {
-    "**/.venv/**": true
-  },
-  "rust-analyzer.inlayHints.typeHints.enable": false
+  "mypy.runUsingActiveInterpreter": true,
+  "files.insertFinalNewline": true,
+  "gitlens.mode.active": "zen",
+  "svelte.plugin.svelte.note-new-transformation": false,
+  "editor.linkedEditing": true,
+  "editor.lineNumbers": "relative"
 }

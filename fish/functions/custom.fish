@@ -38,19 +38,6 @@ end
 
 function setenv; set -gx $argv; end
 
-function standup 
-    google-chrome-stable 'https://meet.google.com/ojr-pqan-dfc?pli=1&authuser=1' 2>&1 &
-    disown
-end
-
-function workday
-    google-chrome-stable 'https://mail.google.com/mail/u/1/#inbox' 2>&1 &
-    google-chrome-stable 'https://atomicjolt.harvestapp.com/time' 2>&1 &
-    google-chrome-stable 'https://atomicjolt.instructure.com' 2>&1 &
-    google-chrome-stable 'https://gitlab.com/atomicjolt' 2>&1 &
-    disown
-end
-
 function set-title
     printf '\033]2;%s\007' $argv[1]
 end
@@ -64,7 +51,3 @@ function record
     wf-recorder -g (slurp) --file=/home/sean/Videos/Captures/$name.mp4
 end
 
-function zth
-    zathura $argv &
-    disown
-end
