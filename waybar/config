@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": [
     "custom/launcher",
-    "sway/workspaces",
+    "wlr/workspaces",
     "sway/mode"
   ],
   "modules-center": [
@@ -12,7 +12,6 @@
     "custom/recorder",
     "tray",
     "idle_inhibitor",
-    "custom/scythe",
     "custom/bluetooth",
     "pulseaudio",
     "network",
@@ -23,7 +22,7 @@
   "sway/window": {
     "max-length": 50
   },
-  "sway/workspaces": {
+  "wlr/workspaces": {
     "format": "{icon}",
     "format-icons": {
       "browse": "",

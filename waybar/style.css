@@ -55,6 +55,11 @@ window > box {
   background-color: @d-group-bkg;
 }
 
+#workspaces button.active {
+  border-bottom: 3px solid @d-blue;
+  background-color: @d-group-bkg;
+}
+
 #workspaces button.urgent {
   background: #12619c;
 }
