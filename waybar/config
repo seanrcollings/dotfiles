@@ -3,10 +3,10 @@
   "modules-left": [
     "custom/launcher",
     "wlr/workspaces",
-    "sway/mode"
+    "hyprland/submap"
   ],
   "modules-center": [
-    "sway/window"
+    "hyprland/window"
   ],
   "modules-right": [
     "custom/recorder",
@@ -19,8 +19,10 @@
     "custom/weather",
     "clock"
   ],
-  "sway/window": {
-    "max-length": 50
+  "hyprland/window": {
+    "max-length": 50,
+    "separate-outputs": true,
+    "on-click": "activated"
   },
   "wlr/workspaces": {
     "format": "{icon}",
@@ -31,6 +33,9 @@
       "chat": "",
       "notes": ""
     }
+  },
+  "hyprland/submap": {
+    "tooltip": false
   },
   "battery": {
     "format": "{icon}",
@@ -123,16 +128,6 @@
   "tray": {
     "icon-size": 16,
     "spacing": 15
-  },
-  "custom/scythe": {
-    "return-type": "json",
-    "exec": "/home/sean/.asdf/shims/scythe waybar",
-    "format": "{icon}{}",
-    "format-icons": {
-      "active": "<span background=\"#f36c00\" foreground=\"#fff\" weight=\"bold\"> H </span>",
-      "inactive": ""
-    },
-    "interval": 5
   },
   "custom/launcher": {
     "format": "",

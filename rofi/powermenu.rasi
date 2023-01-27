@@ -3,6 +3,7 @@
 window {
   location: northeast;
   x-offset: -15px;
+  y-offset: 15px;
 }
 
 textbox-custom {

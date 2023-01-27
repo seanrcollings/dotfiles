@@ -83,7 +83,7 @@
   },
   "[svelte]": {
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "svelte.svelte-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "ruby.codeCompletion": "rcodetools",
   "ruby.intellisense": "rubyLocate",
@@ -152,7 +152,7 @@
     "*.ipynb": "jupyter-notebook"
   },
   "explorer.confirmDelete": false,
-  "svelte.language-server.runtime": "/usr/bin/node",
+  "svelte.language-server.runtime": "/home/sean/.asdf/shims/node",
   "java.refactor.renameFromFileExplorer": "autoApply",
   "editor.fontSize": 13,
   "rust-client.rustupPath": "/home/sean/.cargo/bin/rustup",
@@ -167,7 +167,8 @@
     "html.erb": "html",
     "erb": "html",
     "aspnetcorerazor": "html",
-    "postcss": "css"
+    "postcss": "css",
+    "svelte": "html"
   },
   "omnisharp.monoPath": "/usr/bin/mono",
   "ruby.useBundler": true,
