@@ -83,7 +83,7 @@
   },
   "[svelte]": {
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "svelte.svelte-vscode"
   },
   "ruby.codeCompletion": "rcodetools",
   "ruby.intellisense": "rubyLocate",
