@@ -1,15 +1,10 @@
-@import "../themes/theme.rasi"
+@import "../themes/colors.rasi"
 
 configuration {
   show-icons: false;
   font: "Fira Code 15";
   disable-history: false;
   sidebar-mode: false;
-}
-
-* {
-  background-color: @background;
-  text-color: @text;
 }
 
 window {
@@ -22,30 +17,23 @@ window {
 prompt {
   enabled: true;
   padding: 10px;
-  background-color: @background-light;
-  text-color: @accent;
   border: 2px;
   border-radius: 0px 10px 10px 0px;
-  border-color: @accent;
 }
 
 textbox-custom {
   expand: false;
-  background-color: @accent;
-  text-color: @background;
   padding: 10px 10px 0px 10px;
   border-radius: 10px 0px 0px 10px;
+  background-color: @blue;
 }
 
 inputbar {
   children: [ textbox-custom, prompt ];
   spacing: 0px;
-  background-color: @background;
-  text-color: @text;
   expand: false;
   border: 0px;
   border-radius: 0px;
-  border-color: @accent;
   margin: 0px 0px 0px 0px;
   padding: 0px;
   position: center;
@@ -58,25 +46,23 @@ listview {
   cycle: true;
   dynamic: true;
   layout: vertical;
+  scrollbar: false;
+  border: none;
 }
 
 mainbox {
-  background-color: @background;
   children: [ inputbar, listview ];
   spacing: 12px;
   margin: 12px;
 }
 
 element {
-  background-color: @background-light;
-  text-color: @text;
   orientation: vertical;
   border-radius: 12px;
+  background-color: @normal-background;
 }
 
 element-text {
-  background-color: inherit;
-  text-color: inherit;
   font: "SauceCodePro Nerd Font 20";
   expand: true;
   horizontal-align: 0.5;
@@ -84,11 +70,7 @@ element-text {
   margin: 19px 10px 19px 10px;
 }
 
-
 element selected {
-  background-color: @focused;
-  text-color: @accent;
   border: 2px;
   border-radius: 12px;
-  border-color: @accent;
 }

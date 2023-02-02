@@ -1,4 +1,6 @@
-@import "../themes/theme.rasi"
+@import "../themes/colors.rasi"
+@import "./shared/listview-border.rasi"
+@import "./shared/no-alternate-elements.rasi"
 
 configuration {
   show-icons: false;
@@ -6,55 +8,43 @@ configuration {
   sidebar-mode: false;
 }
 
-* {
-  background-color: @background;
-  text-color: @text;
-}
-
 window {
   transparency: "real";
   border-radius: 12px;
   location: north;
   width: 1400px;
-  height: 400px;
+  height: 430px;
 }
 
 entry {
   expand: true;
   padding: 10px;
-  background-color: @focused;
   border-radius: 0px 10px 10px 0px;
 }
-
 
 textbox-custom {
   expand: false;
   str: " Venture ";
-  background-color: @accent;
-  text-color: @background;
   padding: 10px 10px 0px 10px;
   border-radius: 10px 0px 0px 10px;
   padding: 10px;
+  text-color: @foreground;
 }
 
 num-filtered-rows {
   expand: false;
-  background-color: @background;
-  text-color: @text;
   padding: 10px 10px 0px 10px;
   border-radius: 10px 0px 0px 10px;
   padding: 10px;
+  text-color: @foreground;
 }
 
 inputbar {
   children: [ textbox-custom, entry, num-filtered-rows ];
   spacing: 0px;
-  background-color: @background;
-  text-color: @text;
   expand: false;
   border: 0px;
   border-radius: 0px;
-  border-color: @accent;
   margin: 0px 0px 0px 0px;
   padding: 0px;
 }
@@ -69,22 +59,17 @@ listview {
 }
 
 mainbox {
-  background-color: @background;
   children: [ inputbar, listview ];
   spacing: 12px;
   margin: 12px;
 }
 
 element {
-  background-color: @background-light;
-  text-color: @text;
   orientation: vertical;
   border-radius: 12px;
 }
 
 element-text {
-  background-color: inherit;
-  text-color: inherit;
   expand: true;
   vertical-align: 0.5;
   margin: 19px 15px 19px 15px;
@@ -92,9 +77,6 @@ element-text {
 
 
 element selected {
-  background-color: @focused;
-  text-color: @accent;
   border: 2px;
   border-radius: 12px;
-  border-color: @accent;
 }

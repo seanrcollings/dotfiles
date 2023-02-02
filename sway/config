@@ -11,7 +11,7 @@ set $altMod $mod+Alt
 #################### INIT ######################
 ################################################
 exec $scripts/xdg-desktop-fix
-exec $scripts/displays
+exec_always $scripts/displays
 
 # Startup the clipboard
 exec wl-paste -n -t text --watch clipman store --max-items=30

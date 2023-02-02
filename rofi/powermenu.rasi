@@ -1,8 +1,10 @@
 @import "../shared/widgets.rasi"
+@import "../shared/no-alternate-elements.rasi"
 
 window {
   location: northeast;
   x-offset: -15px;
+  y-offset: 15px;
 }
 
 textbox-custom {

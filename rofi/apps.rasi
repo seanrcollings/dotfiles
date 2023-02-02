@@ -1,22 +1,14 @@
+@import "../themes/colors.rasi"
+@import "./shared/no-alternate-elements.rasi"
+@import "./shared/listview-border.rasi"
+
 configuration {
 	modi: "drun";
 	show-icons: true;
-	font: "SauceCodePro Nerd Font 20";
 	icon-theme: "Numix Circle";
-}
-
-
-@import "../themes/theme.rasi"
-
-configuration {
   show-icons: false;
   font: "Fira Code 15";
   sidebar-mode: false;
-}
-
-* {
-  background-color: @background;
-  text-color: @text;
 }
 
 window {
@@ -28,9 +20,9 @@ window {
 }
 
 entry {
+  font: "Fira Code 20";
   expand: true;
   padding: 12px 10px 0px 10px;
-  background-color: @focused;
   border-radius: 0px 10px 10px 0px;
   placeholder: "Search";
 }
@@ -39,8 +31,7 @@ textbox-custom {
   font: "SauceCodePro Nerd Font 20";
   expand: false;
   str: "  ";
-  background-color: @accent;
-  text-color: white;
+  color: @blue;
   padding: 10px 10px 10px 10px;
   border-radius: 10px 0px 0px 10px;
 }
@@ -48,12 +39,9 @@ textbox-custom {
 inputbar {
   children: [ textbox-custom, entry ];
   spacing: 0px;
-  background-color: @background;
-  text-color: @text;
   expand: false;
   border: 0px;
   border-radius: 0px;
-  border-color: @accent;
   margin: 0px 0px 0px 0px;
   padding: 0px;
 }
@@ -67,7 +55,6 @@ listview {
 }
 
 mainbox {
-  background-color: @background;
   children: [ inputbar, listview ];
   spacing: 12px;
   margin: 12px;
@@ -75,16 +62,12 @@ mainbox {
 
 element {
 	children: [ element-icon, element-text  ];
-  background-color: @background;
-  text-color: @text;
   orientation: vertical;
   border-radius: 12px;
   expand: false;
 }
 
 element-icon {
-  background-color: @background;
-  text-color: @text;
   padding: 12px;
   margin: 0px;
   border: 0px;
@@ -92,8 +75,6 @@ element-icon {
 }
 
 element-text {
-  background-color: inherit;
-  text-color: inherit;
   expand: true;
   vertical-align: 0.5;
   horizontal-align: 0.5;
@@ -102,7 +83,7 @@ element-text {
 }
 
 element selected, element-icon selected {
-  background-color: @focused;
   border: 2px;
   border-radius: 12px;
 }
+

@@ -12,7 +12,6 @@
     "custom/recorder",
     "tray",
     "idle_inhibitor",
-    "custom/scythe",
     "custom/bluetooth",
     "pulseaudio",
     "network",

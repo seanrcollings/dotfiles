@@ -1,37 +1,20 @@
-@define-color text-color #BBC3C8;
-@define-color d-black    #000000;
-@define-color d-red      #ff5555;
-@define-color d-green    #50fa7b;
-@define-color d-yellow   #f1fa8c;
-@define-color d-blue     #3BC0F0;
-@define-color d-magenta  #ff79c6;
-@define-color d-cyan     #8be9fd;
-@define-color d-white    #bfbfbf;
-@define-color db-black   #4d4d4d;
-@define-color db-red     #ff6e67;
-@define-color db-green   #5af78e;
-@define-color db-yellow  #f4f99d;
-@define-color db-blue    #caa9fa;
-@define-color db-magenta #ff92d0;
-@define-color db-cyan    #9aedfe;
-@define-color db-white   #e6e6e6;
+@import "colors.css";
 
-@define-color d-background #222222;
 @define-color d-group-bkg rgba(0, 0, 0, 0.445);
 
 * {
-  color: @text-color;
+  color: @base07;
   font-size: 16px;
 }
 
 window#waybar {
   font-family: "Fira Code", "SauceCodePro Nerd Font", sans-serif;
-  background-color: @d-background;
+  background-color: @base00;
   border-radius: 0px 0px 10px 10px;
 }
 
 window > box {
-  background-color: @d-background;
+  background-color: @base00;
   /* padding: 0px 5px; */
   border-radius: 0px 0px 10px 10px;
 }
@@ -51,18 +34,18 @@ window > box {
 }
 
 #workspaces button.focused {
-  border-bottom: 3px solid @d-blue;
+  border-bottom: 3px solid @base0D;
   background-color: @d-group-bkg;
 }
 
 #workspaces button.urgent {
-  background: #12619c;
+  background: @base08;
 }
 
 #mode {
   margin: 5px 10px;
   border-radius: 4px;
-  border: 1px solid #333;
+  border: 1px solid @base02;
   padding: 1px 5px;
   background-color: rgb(71, 71, 71);
 }
@@ -113,19 +96,19 @@ window > box {
 }
 
 #battery {
-  color: @text-color;
+  color: @base07;
 }
 
 #battery.charging {
-  color: @d-green;
+  color: @base0B;
 }
 
 #battery.warning {
-  color: @d-yellow;
+  color: @base0A;
 }
 
 #battery.critical {
-  color: @db-red;
+  color: @base0F;
 }
 
 #idle_inhibitor {
@@ -138,7 +121,7 @@ window > box {
 }
 
 #idle_inhibitor.activated {
-  color: @d-cyan;
+  color: @base0C;
   background-color: @d-group-bkg;
 }
 
@@ -157,7 +140,7 @@ window > box {
 #custom-recorder {
   font-size: 18px;
   margin: 2px 7px 0px 7px;
-  color: #c9545d;
+  color: @base08;
 }
 
 #custom-launcher {
