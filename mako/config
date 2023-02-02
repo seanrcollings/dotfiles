@@ -1,8 +1,32 @@
-font="SauceCodePro Nerd Font 12"
-background-color=#1D1F28
-margin=20
-padding=10
+font="Fira Code 12"
+margin=30
+padding=20
 border-radius=10
 icon-path=.icons/flattrcolor/status/24:.icons/flattrcolor/devices/48:.icons/flattrcolor/apps/scalable:.icons/flattrcolor/actions/scalable
 default-timeout=3000
 height=400
+anchor=top-right
+
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+
+# Start flavours
+## Base16 OneDark
+# Author: Lalit Magant (http://github.com/tilal6991)
+#
+# You can use these variables anywhere in the mako configuration file.
+
+background-color=#282c34
+text-color=#abb2bf
+border-color=#61afef
+
+[urgency=low]
+background-color=#282c34
+text-color=#e5c07b
+border-color=#61afef
+
+[urgency=high]
+background-color=#282c34
+text-color=#e06c75
+border-color=#61afef
+# End flavours
+
