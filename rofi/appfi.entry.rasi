@@ -1,15 +1,10 @@
-@import "../themes/theme.rasi"
+@import "./themes/colors.rasi"
 
 configuration {
   show-icons: false;
   font: "Fira Code 15";
   disable-history: false;
   sidebar-mode: false;
-}
-
-* {
-  background-color: @background;
-  text-color: @text;
 }
 
 window {
@@ -24,7 +19,6 @@ window {
 prompt {
   enabled: true;
   padding: 10px;
-  text-color: @accent;
   expand: false;
   horizontal-align: 0.5;
   expand: true;
@@ -33,12 +27,9 @@ prompt {
 inputbar {
   children: [ prompt ];
   spacing: 0px;
-  background-color: @background;
-  text-color: @text;
   expand: false;
   border: 0px;
   border-radius: 0px;
-  border-color: @accent;
   margin: 0px 0px 0px 0px;
   padding: 0px;
 }
@@ -46,12 +37,11 @@ inputbar {
 entry {
   expand: true;
   padding: 15px 10px 0px 10px;
-  background-color: @focused;
   border-radius: 10px;
+  background-color: @lightbg;
 }
 
 mainbox {
-  background-color: @background;
   children: [ inputbar, entry ];
   margin: 12px;
 }

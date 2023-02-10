@@ -4,7 +4,7 @@
 
 configuration {
   show-icons: false;
-  font: "Fira Code 15";
+  font: "Fira Code Nerd Font 15";
   sidebar-mode: false;
 }
 
@@ -12,6 +12,7 @@ window {
   transparency: "real";
   border-radius: 12px;
   location: north;
+  y-offset: 15px;
   width: 1400px;
   height: 430px;
 }

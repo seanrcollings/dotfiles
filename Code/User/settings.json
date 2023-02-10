@@ -92,7 +92,6 @@
   "ruby.interpreter.commandPath": "/home/sean/.asdf/shims/ruby",
   "solargraph.bundlerPath": "/home/sean/.asdf/shims/bundle",
   "solargraph.commandPath": "/home/sean/.asdf/shims/solargraph",
-  "python.linting.pylintEnabled": true,
   "editor.formatOnSave": true,
   "eslint.format.enable": true,
   "python.showStartPage": false,
@@ -152,7 +151,6 @@
     "*.ipynb": "jupyter-notebook"
   },
   "explorer.confirmDelete": false,
-  "svelte.language-server.runtime": "/usr/bin/node",
   "java.refactor.renameFromFileExplorer": "autoApply",
   "editor.fontSize": 13,
   "rust-client.rustupPath": "/home/sean/.cargo/bin/rustup",
@@ -336,11 +334,14 @@
   "python.formatting.blackPath": "/home/sean/.asdf/shims/black",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.autoImportUserSymbols": true,
-  "python.analysis.inlayHints.functionReturnTypes": true,
   "mypy.runUsingActiveInterpreter": true,
   "files.insertFinalNewline": true,
   "gitlens.mode.active": "zen",
   "svelte.plugin.svelte.note-new-transformation": false,
   "editor.linkedEditing": true,
-  "editor.lineNumbers": "relative"
+  "editor.lineNumbers": "relative",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "svelte.language-server.runtime": "/home/sean/.asdf/shims/node"
 }

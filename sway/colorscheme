@@ -1,19 +1,19 @@
-## Base16 OneDark
-# Author: Lalit Magant (http://github.com/tilal6991)
+## Base16 Material Vivid
+# Author: joshyrobot
 
-set $base00 #282c34
-set $base01 #353b45
-set $base02 #3e4451
-set $base03 #545862
-set $base04 #565c64
-set $base05 #abb2bf
-set $base06 #b6bdca
-set $base07 #c8ccd4
-set $base08 #e06c75
-set $base09 #d19a66
-set $base0A #e5c07b
-set $base0B #98c379
-set $base0C #56b6c2
-set $base0D #61afef
-set $base0E #c678dd
-set $base0F #be5046
+set $base00 #202124
+set $base01 #27292c
+set $base02 #323639
+set $base03 #44464d
+set $base04 #676c71
+set $base05 #80868b
+set $base06 #9e9e9e
+set $base07 #ffffff
+set $base08 #f44336
+set $base09 #ff9800
+set $base0A #ffeb3b
+set $base0B #00e676
+set $base0C #00bcd4
+set $base0D #2196f3
+set $base0E #673ab7
+set $base0F #8d6e63

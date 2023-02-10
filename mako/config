@@ -5,28 +5,29 @@ border-radius=10
 icon-path=.icons/flattrcolor/status/24:.icons/flattrcolor/devices/48:.icons/flattrcolor/apps/scalable:.icons/flattrcolor/actions/scalable
 default-timeout=3000
 height=400
+width=300
 anchor=top-right
 
 on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
 
 # Start flavours
-## Base16 OneDark
-# Author: Lalit Magant (http://github.com/tilal6991)
+## Base16 Material Vivid
+# Author: joshyrobot
 #
 # You can use these variables anywhere in the mako configuration file.
 
-background-color=#282c34
-text-color=#abb2bf
-border-color=#61afef
+background-color=#202124
+text-color=#80868b
+border-color=#2196f3
 
 [urgency=low]
-background-color=#282c34
-text-color=#e5c07b
-border-color=#61afef
+background-color=#202124
+text-color=#ffeb3b
+border-color=#2196f3
 
 [urgency=high]
-background-color=#282c34
-text-color=#e06c75
-border-color=#61afef
+background-color=#202124
+text-color=#f44336
+border-color=#2196f3
 # End flavours
 

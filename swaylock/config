@@ -1,6 +1,5 @@
 ignore-empty-password
 font="Fira Code"
-grace=20
 
 clock
 timestr=%R
