@@ -1,7 +1,7 @@
 configuration {
 	modi: "drun";
 	show-icons: true;
-	font: "Fira Code";
+	font: "Fira Code 15";
 	icon-theme: "Papirus";
 }
 

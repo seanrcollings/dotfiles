@@ -1,12 +1,5 @@
 @import "../themes/theme.rasi"
 
-configuration {
-  show-icons: false;
-  font: "Fira Code 15";
-  disable-history: false;
-  sidebar-mode: false;
-}
-
 * {
   background-color: @background;
   text-color: @text;

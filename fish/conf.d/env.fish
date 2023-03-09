@@ -9,5 +9,5 @@ set -e ASDF_PYTHON_VERSION # What is even setting this?
 #set -x RUBYOPT "-W:no-deprecated -W:no-experimental" # Older rails versions might blow up
 set -gx MSBuildSDKsPath "/usr/share/dotnet/sdk/5.0.205/Sdks"
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden -g '!.git/'"
-. ~/.asdf/plugins/dotnet-core/set-dotnet-home.fish
+#. ~/.asdf/plugins/dotnet-core/set-dotnet-home.fish
 

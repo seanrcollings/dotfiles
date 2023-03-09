@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Monokai Gravity",
+  "workbench.colorTheme": "One Monokai",
   "workbench.iconTheme": "material-icon-theme",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.stablePeek": true,
@@ -79,7 +79,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
   },
   "[svelte]": {
     "editor.tabSize": 2,
@@ -92,7 +93,6 @@
   "ruby.interpreter.commandPath": "/home/sean/.asdf/shims/ruby",
   "solargraph.bundlerPath": "/home/sean/.asdf/shims/bundle",
   "solargraph.commandPath": "/home/sean/.asdf/shims/solargraph",
-  "python.linting.pylintEnabled": true,
   "editor.formatOnSave": true,
   "eslint.format.enable": true,
   "python.showStartPage": false,
@@ -103,6 +103,9 @@
       "strings": true
     },
     "editor.suggest.insertMode": "replace"
+  },
+  "vim.handleKeys": {
+    "<C-w>": false
   },
   "window.titleBarStyle": "custom",
   "window.customMenuBarAltFocus": false,
@@ -149,7 +152,6 @@
     "*.ipynb": "jupyter-notebook"
   },
   "explorer.confirmDelete": false,
-  "svelte.language-server.runtime": "/usr/bin/node",
   "java.refactor.renameFromFileExplorer": "autoApply",
   "editor.fontSize": 13,
   "rust-client.rustupPath": "/home/sean/.cargo/bin/rustup",
@@ -163,7 +165,8 @@
   "emmet.includeLanguages": {
     "html.erb": "html",
     "erb": "html",
-    "aspnetcorerazor": "html"
+    "aspnetcorerazor": "html",
+    "postcss": "css"
   },
   "omnisharp.monoPath": "/usr/bin/mono",
   "ruby.useBundler": true,
@@ -199,6 +202,12 @@
         "function.declaration": {
           "foreground": "#a4c267"
         }
+      }
+    },
+    "[One Monokai]": {
+      "rules": {
+        "module": "#98C379",
+        "function": "#3BC0F0"
       }
     }
   },
@@ -297,7 +306,7 @@
   "csharp.semanticHighlighting.enabled": true,
   "omnisharp.useGlobalMono": "always",
   "editor.cursorBlinking": "phase",
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,
@@ -323,5 +332,18 @@
   "julia.executablePath": "/home/sean/.asdf/shims/julia",
   "window.menuBarVisibility": "compact",
   "editor.bracketPairColorization.enabled": false,
-  "python.formatting.blackPath": "/home/sean/.asdf/shims/black"
+  "python.formatting.blackPath": "/home/sean/.asdf/shims/black",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoImportUserSymbols": true,
+  "mypy.runUsingActiveInterpreter": true,
+  "files.insertFinalNewline": true,
+  "svelte.plugin.svelte.note-new-transformation": false,
+  "editor.linkedEditing": true,
+  "editor.lineNumbers": "relative",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "svelte.language-server.runtime": "/home/sean/.asdf/shims/node",
+  "git.openRepositoryInParentFolders": "never",
+  "gitlens.mode.active": "zen"
 }

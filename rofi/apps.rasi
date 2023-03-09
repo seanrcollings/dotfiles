@@ -1,18 +1,5 @@
-configuration {
-	modi: "drun";
-	show-icons: true;
-	font: "SauceCodePro Nerd Font 20";
-	icon-theme: "Numix Circle";
-}
-
-
 @import "../themes/theme.rasi"
 
-configuration {
-  show-icons: false;
-  font: "Fira Code 15";
-  sidebar-mode: false;
-}
 
 * {
   background-color: @background;

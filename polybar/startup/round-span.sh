@@ -7,5 +7,5 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 polybar -c /home/sean/.config/polybar/config.d/round.polybar span &> /tmp/polybar.log & 
-MONITOR=DP2 polybar -c /home/sean/.config/polybar/config.d/round.polybar span &> /tmp/polybar.log & 
+MONITOR=DP-0 polybar -c /home/sean/.config/polybar/config.d/round.polybar span &> /tmp/polybar.log & 
 
