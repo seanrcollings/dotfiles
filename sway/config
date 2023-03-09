@@ -89,6 +89,7 @@ for_window [app_id="firefox" title="Firefox - Sharing Indicator"] {
   kill
 }
 
+focus_on_window_activation focus
 ################################################
 #################### INPUT  ####################
 ################################################
@@ -139,10 +140,11 @@ bindsym $mod+d exec rofi -show drun run -theme apps.rasi
 bindsym $altMod+v exec clipman pick -t rofi --tool-args="-theme clipboard" --max-items=30
 # Powermenu
 bindsym $altMod+p exec $appfi run powermenu-sway --mode standalone --rofi-args "-p '$(uptime -p | cut -c4-)'"
+bindsym $altMod+h exec $appfi run search --mode standalone
 # Emoji 
 bindsym $altMod+e exec rofi -mode emoji -show emoji -theme emoji.rasi
 # Projects
-bindsym Control+Mod1+j exec "/home/sean/.asdf/shims/venture run"
+bindsym Control+Mod1+j exec "/home/sean/.asdf/shims/venture browse -p code"
 bindsym Control+Mod1+k exec "/home/sean/.asdf/shims/venture quicklaunch"
 
 bindsym $altMod+c exec $home/.local/bin/cpick

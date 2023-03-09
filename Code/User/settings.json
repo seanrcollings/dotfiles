@@ -79,7 +79,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
   },
   "[svelte]": {
     "editor.tabSize": 2,
@@ -305,7 +306,7 @@
   "csharp.semanticHighlighting.enabled": true,
   "omnisharp.useGlobalMono": "always",
   "editor.cursorBlinking": "phase",
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,
@@ -336,12 +337,13 @@
   "python.analysis.autoImportUserSymbols": true,
   "mypy.runUsingActiveInterpreter": true,
   "files.insertFinalNewline": true,
-  "gitlens.mode.active": "zen",
   "svelte.plugin.svelte.note-new-transformation": false,
   "editor.linkedEditing": true,
   "editor.lineNumbers": "relative",
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
-  "svelte.language-server.runtime": "/home/sean/.asdf/shims/node"
+  "svelte.language-server.runtime": "/home/sean/.asdf/shims/node",
+  "git.openRepositoryInParentFolders": "never",
+  "gitlens.mode.active": "zen"
 }
