@@ -1,0 +1,5 @@
+set $background /home/sean/Pictures/wallpapers/outer_wilds_2.png
+set $scripts /home/sean/.config/sway/scripts
+set $laptop eDP-1
+set $mod Mod4
+set $altMod $mod+Alt

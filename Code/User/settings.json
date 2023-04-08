@@ -316,8 +316,8 @@
     "yaml": true,
     "plaintext": true,
     "markdown": true,
-    "ruby": false,
-    "javascriptreact": false,
+    "ruby": true,
+    "javascriptreact": true,
     "rust": false,
     "javascript": false,
     "typescript": false
@@ -348,6 +348,6 @@
   },
   "svelte.language-server.runtime": "/home/sean/.asdf/shims/node",
   "git.openRepositoryInParentFolders": "never",
-  "gitlens.mode.active": "zen",
-  "isort.args": ["--wrap-length", "80"]
+  "isort.args": ["--wrap-length", "80"],
+  "gitlens.mode.active": "zen"
 }
