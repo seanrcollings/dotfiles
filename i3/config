@@ -37,7 +37,6 @@ exec_always --no-startup-id $HOME/.config/polybar/grayblocks/launch.sh
 # Start a terminal
 bindsym $mod+Return exec alacritty
 
-
 # Open applications menu
 bindsym $mod+d exec --no-startup-id "rofi -show drun -theme /home/sean/.config/rofi/apps.rasi"
 
@@ -60,7 +59,7 @@ bindsym Control+Mod1+s exec lock --sleep
 bindsym Control+Mod1+p exec /home/sean/.config/rofi/powermenu/powermenu.sh
 
 # Open Windows Menu
-bindsym Mod1+Tab exec "rofi -show window -mode window -window-thumbnail -theme /home/sean/.config/rofi/themes/windows.rasi"
+bindsym Mod1+Tab exec "rofi -show window -mode window -window-thumbnail -theme /home/sean/.config/rofi/windows.rasi"
 
 bindsym $mod+Mod1+t exec "bash /home/sean/.config/i3/scripts/audio.bash"
 
