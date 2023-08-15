@@ -23,6 +23,8 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "files.trimTrailingWhitespace": true,
   "search.exclude": {
+    "**/.git/**": true,
+    "**/.mypy_cache/**": true,
     "env/**": true,
     "node_modules": true
   },
@@ -49,7 +51,7 @@
     "editor.defaultFormatter": "rust-lang.rust"
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.defaultFormatter": "vscode.typescript-language-features",
     "editor.tabSize": 2
   },
   "[javascript]": {
@@ -96,7 +98,6 @@
   "ruby.interpreter.commandPath": "/home/sean/.asdf/shims/ruby",
   "solargraph.bundlerPath": "/home/sean/.asdf/shims/bundle",
   "solargraph.commandPath": "/home/sean/.asdf/shims/solargraph",
-  "editor.formatOnSave": true,
   "eslint.format.enable": true,
   "python.showStartPage": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -313,14 +314,15 @@
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,
-    "yaml": true,
     "plaintext": true,
     "markdown": true,
-    "ruby": false,
-    "javascriptreact": false,
+    "scminput": false,
+    "yaml": true,
+    "ruby": true,
+    "javascriptreact": true,
     "rust": false,
-    "javascript": false,
-    "typescript": false
+    "javascript": true,
+    "typescript": true
   },
   "svelte.enable-ts-plugin": true,
   "python.linting.mypyPath": "/home/sean/.asdf/shims/mypy",
@@ -348,6 +350,18 @@
   },
   "svelte.language-server.runtime": "/home/sean/.asdf/shims/node",
   "git.openRepositoryInParentFolders": "never",
-  "gitlens.mode.active": "zen",
-  "isort.args": ["--wrap-length", "80"]
+  "isort.args": ["--wrap-length", "80"],
+  "editor.formatOnSave": true,
+  "github.gitProtocol": "ssh",
+  "gitlens.integrations.enabled": true,
+  "gitlens.remotes": [
+    {
+      "domain": "github.com",
+      "type": "GitHub"
+    },
+    {
+      "domain": "discoveryed-github.com",
+      "type": "GitHub"
+    }
+  ]
 }

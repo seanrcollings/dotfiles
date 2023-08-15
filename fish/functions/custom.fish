@@ -68,3 +68,8 @@ function zth
     zathura $argv &
     disown
 end
+
+
+function pcsv
+    perl -pe 's/((?<=,)|(?<=^)),/ ,/g;' "$argv" | column -t -s, | less  -F -S -X -K
+end

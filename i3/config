@@ -21,9 +21,9 @@ exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-ag
 exec_always --no-startup-id /home/sean/.screenlayout/docked.sh
 
 # set background
-exec_always --no-startup-id feh --bg-fill /home/sean/Pictures/outerwilds.png
+# exec_always --no-startup-id feh --bg-fill /home/sean/Pictures/outerwilds.png
+exec_always --no-startup-id feh --bg-fill /home/sean/Pictures/black.png
 
-# exec_always --no-startup-id x-on-resize --config "autorandr --change --for" --start
 
 exec_always --no-startup-id dunst
 
@@ -44,10 +44,6 @@ bindsym $mod+d exec --no-startup-id "rofi -show drun -theme /home/sean/.config/r
 # Open Clipboard
 bindsym $mod+Mod1+v exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' --theme /home/sean/.config/rofi/clipboard.rasi
 
-# Screen Shots
-bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
-bindsym Control+Print exec gnome-screenshot -i
-
 # lock the screen
 bindsym Control+Mod1+l exec lock
 
@@ -66,6 +62,19 @@ bindsym Control+Mod1+p exec /home/sean/.config/rofi/powermenu/powermenu.sh
 # Open Windows Menu
 bindsym Mod1+Tab exec "rofi -show window -mode window -window-thumbnail -theme /home/sean/.config/rofi/themes/windows.rasi"
 
+bindsym $mod+Mod1+t exec "bash /home/sean/.config/i3/scripts/audio.bash"
+
+## Screenshots
+# bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date +'%Y-%m-%dT%H:%M:%S%z').png"
+bindsym Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/Screenshots/$(date +'%Y-%m-%dT%H:%M:%S%z').png"
+# bindsym Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/Screenshots/input.png" && convert "/home/$USER/Pictures/Screenshots/input.png" -resize 1200 "/home/$USER/Pictures/result.png"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/Screenshots/$(date +'%Y-%m-%dT%H:%M:%S%z').png"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
 ################################################
 ################## APPEARANCE ##################
 ################################################
@@ -73,7 +82,7 @@ bindsym Mod1+Tab exec "rofi -show window -mode window -window-thumbnail -theme /
 # class                  border   backgr   text     indicator child_border
 client.focused           #333333  #1d1f28  #BBC3C8  #5f676a   #3BC0F0
 client.focused_inactive  #1b1b1b  #12141a  #BBC3C8  #222222   #222222
-client.unfocused         #1b1b1b  #12141a  #BBC3C8  #222222   #222222
+client.unfocused         #1b1b1b  #12141a  #BBC3C8  #222222   #333333
 client.urgent            #2f343a  #444444  #BBC3C8  #900000   #900000
 client.placeholder       #d64937  #444444  #BBC3C8  #000000   #0c0c0c
 
@@ -86,6 +95,7 @@ for_window [class=".*"] border pixel 2
 gaps inner 8
 gaps outer 8
 hide_edge_borders smart_no_gaps
+smart_gaps on
 
 ################################################
 ################# KEY BINDINGS #################
@@ -159,6 +169,7 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
 
 ################# WORKSPACES #################
 
@@ -259,3 +270,4 @@ for_window [title="ranger"] floating enable
 for_window [class="Nautilus"] floating enable
 for_window [title="Pong!"] floating enable
 for_window [class="Gnome-screenshot"] floating enable
+for_window [class="zoom"] floating enable
