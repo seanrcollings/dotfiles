@@ -7,7 +7,6 @@ alias ls="logo-ls"
 alias ll="logo-ls -lh"
 alias djm="./manage.py"
 alias pr="poetry run"
-alias pick-color="grim -g (slurp -p) -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:-"
 
 # Git Aliases
 alias ghs="/usr/bin/gs"

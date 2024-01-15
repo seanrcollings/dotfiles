@@ -21,6 +21,9 @@ bindsym $altMod+s exec "systemctl suspend"
 # Opens Bluetooth Menu
 bindsym Control+Mod1+b exec "/home/sean/.local/bin/bluemng toggle"
 
+# Color Picker
+bindsym $altMod+c exec $home/.local/bin/cpick
+
 #################### ROFI #######################
 set $rofi_home /home/sean/.config/rofi
 set $appfi /home/sean/.asdf/shims/appfi
@@ -30,15 +33,15 @@ bindsym $mod+d exec rofi -show drun run -theme apps.rasi
 # Open Clipboard
 bindsym $altMod+v exec clipman pick -t rofi --tool-args="-theme clipboard" --max-items=30
 # Powermenu
-bindsym $altMod+p exec $appfi run powermenu-sway --mode standalone --rofi-args "-p '$(uptime -p | cut -c4-)'"
+bindsym $altMod+p exec $appfi run powermenu-sway --mode standalone --rofi-args "-p :D"
 bindsym $altMod+h exec $appfi run search --mode standalone
-# Emoji 
+# Emoji
 bindsym $altMod+e exec rofi -mode emoji -show emoji -theme emoji.rasi
 # Projects
-bindsym Control+Mod1+j exec "/home/sean/.asdf/shims/venture browse -p code"
-bindsym Control+Mod1+k exec "/home/sean/.asdf/shims/venture quicklaunch"
+bindsym $altMod+j exec "/home/sean/.asdf/shims/venture browse -p code"
+bindsym $altMod+k exec "/home/sean/.asdf/shims/venture quicklaunch"
 
-bindsym $altMod+c exec $home/.local/bin/cpick
+bindsym Alt+Tab exec rofi -show window -theme $rofi_home/windows.rasi
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -58,10 +61,10 @@ floating_modifier $mod
 bindsym $mod+q kill
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -70,10 +73,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -86,7 +89,7 @@ bindsym $mod+bracketleft exec focus output left
 bindsym $mod+bracketright exec focus output right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+# bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -204,3 +207,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+########### SCRATCHPAD ###############
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show

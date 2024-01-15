@@ -1,8 +1,9 @@
 exec $scripts/xdg-desktop-fix
+
 exec_always $scripts/displays
 
 # Startup the clipboard
-exec wl-paste -n -t text --watch clipman store --max-items=30
+exec --no-persist wl-paste -n -t text --watch clipman store --max-items=30
 
 # Notifcation Daemon
 exec mako
@@ -11,7 +12,10 @@ exec mako
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # set background
-output "*" bg $background fill
+# output "*" bg $background fill
+exec_always $scripts/backgrounds primary $bg1 
+exec_always $scripts/backgrounds secondary $bg2
+
 
 
 exec swayidle -w \
