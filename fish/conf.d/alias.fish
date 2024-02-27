@@ -23,6 +23,10 @@ alias gps="git push"
 alias gl="git log"
 
 alias m="micro"
+alias vpns="openvpn3 session-start --config aj"
+alias vpnc="openvpn3 session-manage -D --config aj"
+
+alias kc="kubectl"
 
 function rf
     source ~/.config/fish/config.fish

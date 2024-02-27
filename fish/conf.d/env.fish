@@ -10,4 +10,3 @@ set -e ASDF_PYTHON_VERSION # What is even setting this?
 set -gx MSBuildSDKsPath "/usr/share/dotnet/sdk/5.0.205/Sdks"
 set -gx FZF_DEFAULT_COMMAND "rg --files --hidden -g '!.git/'"
 #. ~/.asdf/plugins/dotnet-core/set-dotnet-home.fish
-

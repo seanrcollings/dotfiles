@@ -73,3 +73,24 @@ end
 function pcsv
     perl -pe 's/((?<=,)|(?<=^)),/ ,/g;' "$argv" | column -t -s, | less  -F -S -X -K
 end
+
+
+# Set the current kubernetes context
+function kx 
+   if count $argv > /dev/null
+      kubectl config use-context $argv[1]
+   else 	
+      kubectl config current-context 
+   end
+end
+
+# Set the current kubernetes namespaces
+function kn
+   if count $argv > /dev/null
+      kubectl config set-context --current --namespace $argv[1]
+   else 	
+      kubectl config view --minify | grep namespace | cut -d" " -f6
+   end
+end
+
+

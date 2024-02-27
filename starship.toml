@@ -5,14 +5,21 @@ $hostname\
 $shlvl\
 $jobs\
 $directory\
+$kubernetes\
+$context\
 $git_branch\
 $git_status\
 $git_state\
 $package\
-$python
+$python\
+$cmd_duration
 [└─](bold #3BC0F0)$character
 """
 
+
+[cmd_duration]
+min_time = 500
+format = 'took [$duration](bold yellow)'
 
 
 [character]
@@ -107,3 +114,7 @@ staged = '+'
 renamed = ""
 deleted = "[](bold red)"
 style = "bold green"
+
+[kubernetes]
+disabled = false
+format = 'on [⛵ in $context (\($namespace\))](dimmed green) '

@@ -1,4 +1,5 @@
 {
+  "typescript.tsserver.log": "off",
   "workbench.colorTheme": "One Monokai",
   "workbench.iconTheme": "material-icon-theme",
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -20,7 +21,6 @@
     "**/**.pytest_cache": true,
     "**/**.venv": true
   },
-  "diffEditor.ignoreTrimWhitespace": false,
   "files.trimTrailingWhitespace": true,
   "search.exclude": {
     "**/.git/**": true,
@@ -74,17 +74,17 @@
   },
   "[typescript]": {
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescriptreact]": {
     "editor.tabSize": 2,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python",
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnType": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     }
   },
   "[svelte]": {
@@ -94,7 +94,7 @@
   "ruby.codeCompletion": "rcodetools",
   "ruby.intellisense": "rubyLocate",
   "ruby.useLanguageServer": true,
-  "ruby.linter.run": "onSave",
+  "ruby.linter.run": "off",
   "ruby.interpreter.commandPath": "/home/sean/.asdf/shims/ruby",
   "solargraph.bundlerPath": "/home/sean/.asdf/shims/bundle",
   "solargraph.commandPath": "/home/sean/.asdf/shims/solargraph",
@@ -108,14 +108,23 @@
     },
     "editor.suggest.insertMode": "replace"
   },
+  "vim.useSystemClipboard": true,
+  "vim.overrideCopy": true,
   "vim.handleKeys": {
-    "<C-w>": false
+    "<C-w>": false,
+    "<C-b>": false,
+    "<C-p>": false
   },
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    }
+  ],
   "window.titleBarStyle": "custom",
   "window.customMenuBarAltFocus": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.external.linuxExec": "alacritty",
-  "notebook.kernelProviderAssociations": [],
   "sorbet.lspConfigs": [
     {
       "id": "stable",
@@ -132,22 +141,11 @@
       ]
     }
   ],
-
-  "ruby.rubocop.suppressRubocopWarnings": true,
   "editor.semanticHighlighting.enabled": true,
   "javascript.implicitProjectConfig.checkJs": true,
-  "python.formatting.provider": "black",
   "files.associations": {
     "*.jsx": "javascriptreact",
     "*.pl": "prolog"
-  },
-  "ruby.format": false,
-  "ruby.lint": {
-    "rubocop": {
-      "useBundler": true,
-      "configFilePath": ".rubocop.yml",
-      "forceExclusion": true
-    }
   },
   "explorer.confirmDragAndDrop": false,
   "javascript.preferences.quoteStyle": "single",
@@ -159,7 +157,7 @@
   "java.refactor.renameFromFileExplorer": "autoApply",
   "editor.fontSize": 13,
   "rust-client.rustupPath": "/home/sean/.cargo/bin/rustup",
-  "mypy.dmypyExecutable": "~/.asdf/shims/dmypy",
+  "mypy.dmypyExecutable": "~/.local/bin/dmypy",
   "security.workspace.trust.untrustedFiles": "open",
   "notebook.cellToolbarLocation": {
     "default": "right",
@@ -340,7 +338,6 @@
   "python.formatting.blackPath": "/home/sean/.asdf/shims/black",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.autoImportUserSymbols": true,
-  "mypy.runUsingActiveInterpreter": true,
   "files.insertFinalNewline": true,
   "svelte.plugin.svelte.note-new-transformation": false,
   "editor.linkedEditing": true,
@@ -363,5 +360,33 @@
       "domain": "discoveryed-github.com",
       "type": "GitHub"
     }
-  ]
+  ],
+  "crates.listPreReleases": true,
+  "task.allowAutomaticTasks": "on",
+  "rubyLsp.formatter": "none",
+
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "diagnostics": true,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": true,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true,
+    "completion": true,
+    "codeLens": true,
+    "definition": true,
+    "workspaceSymbol": true,
+    "references": true
+  },
+  "git.autofetch": true,
+  "workbench.activityBar.location": "top",
+  "window.customTitleBarVisibility": "auto",
+  "kotlin.languageServer.enabled": false,
+  "kotlin.debugAdapter.enabled": false
 }
