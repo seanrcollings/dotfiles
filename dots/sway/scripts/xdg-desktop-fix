@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Fixes an issue with xdg-portal not working properly on startup
+dbus-update-activation-environment 2>/dev/null
+dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+#dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+systemctl --user restart xdg-desktop-portal-wlr
+systemctl --user restart xdg-desktop-portal

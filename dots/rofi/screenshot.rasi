@@ -1,0 +1,6 @@
+* {
+  height: 350px;
+  text: "Screenshot";
+}
+
+@import "./shared/choices.rasi"

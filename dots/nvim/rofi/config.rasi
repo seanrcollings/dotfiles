@@ -1,0 +1,8 @@
+
+configuration {
+	modi: "drun";
+	show-icons: false;
+	font: "Fira Code 15";
+	icon-theme: "Papirus";
+}
+

@@ -1,0 +1,68 @@
+@import "../themes/colors.rasi"
+@import "./listview-border.rasi"
+
+configuration {
+  show-icons: false;
+  font: "Fira Code 15";
+  sidebar-mode: false;
+}
+
+
+window {
+  transparency: "real";
+  border-radius: 12px;
+  location: center;
+  width: 500px;
+  height: @height;
+}
+
+textbox-custom {
+  expand: false;
+  padding: 10px ;
+  border-radius: 10px;
+  background-color: @blue;
+  str: @text;
+}
+
+inputbar {
+  children: [ textbox-custom ];
+  spacing: 0px;
+  expand: false;
+  border: 0px;
+  border-radius: 0px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  position: center;
+}
+
+listview {
+  columns: 1;
+  lines: 1;
+  spacing: 20px;
+  cycle: true;
+  dynamic: true;
+  layout: vertical;
+  scrollbar: false;
+}
+
+mainbox {
+  children: [ inputbar, listview ];
+  spacing: 12px;
+  margin: 12px;
+}
+
+element {
+  orientation: vertical;
+  border-radius: 12px;
+}
+
+element-text {
+  expand: true;
+  vertical-align: 0.5;
+  margin: 19px 15px 19px 15px;
+}
+
+element selected {
+  border: 2px;
+  border-radius: 12px;
+}

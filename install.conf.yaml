@@ -1,0 +1,10 @@
+- link:
+    ~/.config/fish: dots/fish
+    ~/.config/ags: dots/ags
+    ~/.config/starship.toml: dots/starship.toml
+    ~/.config/alacritty: dots/alacritty
+    ~/.config/sway: dots/sway
+    ~/.config/rofi: dots/rofi
+    ~/.config/waybar: dots/waybar
+    ~/.config/nvim: dots/nvim
+
