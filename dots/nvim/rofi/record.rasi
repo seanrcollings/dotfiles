@@ -1,6 +1,0 @@
-* {
-  height: 350px;
-  text: "Screen Recording";
-}
-
-@import "./shared/choices.rasi"

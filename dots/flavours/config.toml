@@ -1,0 +1,32 @@
+# Configuration for flavours
+# https://github.com/Misterio77/flavours
+shell = "bash -c '{}'"
+
+[[items]]
+file = "~/.config/sway/config.d/colorscheme"
+template = "sway"
+subtemplate = "colors"
+hook = "swaymsg reload"
+light = false
+rewrite = true
+
+[[items]]
+file = "~/.config/waybar/colors.css"
+template = "waybar"
+rewrite = true
+hook = "killall -SIGUSR2 waybar"
+
+[[items]]
+file = "~/.config/alacritty/colors.yml"
+template = "alacritty"
+rewrite = true
+
+[[items]]
+file = "~/.config/rofi/themes/colors.rasi"
+template = "rofi"
+rewrite = true
+
+[[item]]
+file= "~/.config/mako/config"
+template = "mako"
+hook = "killall mako"

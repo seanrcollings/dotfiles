@@ -7,4 +7,5 @@
     ~/.config/rofi: dots/rofi
     ~/.config/waybar: dots/waybar
     ~/.config/nvim: dots/nvim
+    ~/.themes: themes
 

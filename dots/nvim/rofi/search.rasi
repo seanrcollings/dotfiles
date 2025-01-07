@@ -1,6 +1,0 @@
-@import "./shared/listings.rasi"
-
-textbox-custom {
-  str: " Search ";
-}
-

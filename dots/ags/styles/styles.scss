@@ -1,0 +1,53 @@
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+
+@use "colors" as *;
+
+window.Bar {
+  background: transparent;
+  color: $fg-color;
+  font-weight: bold;
+
+  > centerbox {
+    background-color: $bg-color;
+    padding: 8px;
+  }
+
+  button {
+    border-radius: 5px;
+    margin: 2px;
+    // background-color: $success-color;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+window.AppSelector {
+  background-color: $bg-color;
+  color: $fg-color;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 5px;
+  box-shadow: none;
+  border: none;
+
+  entry {
+    margin-bottom: 10px;
+  }
+
+  .apps-list {
+    box {
+      margin: 5px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: $bg-color;
+      color: $fg-color;
+      box-shadow: none;
+      border: none;
+    }
+
+    button {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}

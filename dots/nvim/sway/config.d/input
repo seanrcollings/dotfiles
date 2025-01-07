@@ -1,8 +1,0 @@
-input "type:touchpad" {
-	tap enabled
-}
-
-input "type:keyboard" {
-	xkb_numlock enabled
-}
-

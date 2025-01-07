@@ -1,5 +1,0 @@
-@import "./shared/listings.rasi"
-
-textbox-custom {
-  str: " Window ";
-}

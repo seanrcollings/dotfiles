@@ -1,7 +1,0 @@
-include config.d/variables
-include config.d/init
-include config.d/colorscheme
-include config.d/appearance
-include config.d/input
-include config.d/keybinds
-
