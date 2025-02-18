@@ -11,7 +11,7 @@ wm = i3ipc.Connection()
 
 serial_map = {
     "#ASPB6AG1Rq7d": "pos 0 0 mode 2560x1440@143.998hz transform 270",
-    "5SJ72S3": "pos 1440 419 mode 3440x1440@99.982hz",
+    "FLPG2S3": "pos 1440 419 mode 3440x1440@99.982hz transform 0",
 }
 
 
