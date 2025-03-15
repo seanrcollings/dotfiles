@@ -27,10 +27,10 @@
     "format": "{icon}",
     "format-icons": {
       "browse": "󰈹 ",
-      "code": "",
-      "terminal": "",
-      "chat": "",
-      "notes": ""
+      "code": " ",
+      "terminal": " ",
+      "chat": " ",
+      "notes": " "
     }
   },
   "battery": {
