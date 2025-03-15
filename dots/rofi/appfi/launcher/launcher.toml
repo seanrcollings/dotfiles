@@ -1,0 +1,27 @@
+[display]
+order = ["clipboard", "record", "screenshot", "search", "apps", "power"]
+
+[options.clipboard]
+label = " clipboard"
+command = "clipman pick -t rofi --tool-args=\"-theme clipboard\" --max-items=30"
+
+[options.record]
+label = "  record"
+command = "$appfi run record"
+
+[options.screenshot]
+label = "  screenshot"
+command = "$appfi run screenshot"
+
+[options.search]
+label = "  search"
+command = "$appfi run search"
+
+[options.apps]
+label = "  apps"
+command = "rofi -show drun run -theme apps.rasi"
+
+[options.power]
+label = "  power"
+command = "$appfi run powermenu"
+

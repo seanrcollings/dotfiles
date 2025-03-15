@@ -127,7 +127,7 @@
   },
   "custom/launcher": {
     "format": "",
-    "on-click": "/usr/bin/rofi -show drun run -theme apps.rasi"
+    "on-click": "/home/sean/.local/bin/appfi run launcher"
   },
   "custom/recorder": {
     "format": " ",

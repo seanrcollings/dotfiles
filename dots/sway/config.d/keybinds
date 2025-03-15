@@ -17,6 +17,8 @@ bindsym $altMod+c exec $home/.local/bin/cpick
 set $rofi_home $home/.config/rofi
 set $appfi $home/.local/bin/appfi
 
+# Open Launcher
+bindsym $mod+Space exec $appfi run launcher
 # Open applications menu
 bindsym $mod+d exec rofi -show drun run -theme apps.rasi
 # Open Clipboard
