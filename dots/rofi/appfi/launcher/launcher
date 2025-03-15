@@ -13,7 +13,7 @@ with open(config_path, "rb") as f:
 
 
 # Replace environment variables in commands
-def process_command(cmd):
+def process_command(cmd: str):
     return cmd.replace("$appfi", appfi)
 
 
@@ -30,7 +30,7 @@ if len(sys.argv) > 1:
         subprocess.run(command, shell=True)
     else:
         print(f"Invalid option: {option}")
-        # sys.exit(1)
+        sys.exit(1)
 else:
     # Display options in configured order
     print(

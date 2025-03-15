@@ -4,4 +4,4 @@ include config.d/colorscheme
 include config.d/appearance
 include config.d/input
 include config.d/keybinds
-
+include config.d/swayfx
