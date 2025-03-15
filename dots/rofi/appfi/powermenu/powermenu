@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+APPFI_PATH="$HOME/.local/bin/appfi"
+
 LOGOUT=""
 LOCK=""
 SLEEP=""
@@ -20,13 +22,13 @@ then
             systemctl suspend
             ;;
         $LOGOUT)
-            appfi confirm "Exit Sway?" && sway exit
+            $APPFI_PATH confirm "Exit Sway?" && sway exit
             ;;
         $REBOOT)
-            appfi confirm "Reboot?" && systemctl reboot
+            $APPFI_PATH confirm "Reboot?" && systemctl reboot
             ;;
         $OFF)
-            appfi confirm "Shutdown?" && systemctl poweroff
+            $APPFI_PATH confirm "Shutdown?" && systemctl poweroff
             ;;
         *)
             ;;
@@ -34,4 +36,3 @@ then
 else
     echo -e "$LOCK\n$SLEEP\n$HIBERNATE\n$LOGOUT\n$REBOOT\n$OFF"
 fi
-
