@@ -1,4 +1,4 @@
-@import "./themes/colors.rasi"
+@import "../../themes/colors.rasi"
 
 configuration {
   show-icons: false;

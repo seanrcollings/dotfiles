@@ -12,7 +12,6 @@
     "custom/recorder",
     "tray",
     "idle_inhibitor",
-    "custom/bluetooth",
     "pulseaudio",
     "network",
     "battery",
@@ -35,18 +34,18 @@
   "battery": {
     "format": "{icon}",
     "tooltip-format": "{capacity}%",
-    "format-charging": "{capacity}% ",
+    "format-charging": "{capacity}% 󰂄",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
     ],
     "states": {
       "warning": 20,
@@ -59,17 +58,17 @@
   },
   "pulseaudio": {
     "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}%   ",
-    "format-muted": "ﱝ",
+    "format-bluetooth": "{volume}%  󰥰",
+    "format-muted": "",
     "format-icons": {
       "headphone": "",
       "phone": "",
       "portable": "",
       "car": "",
       "default": [
-        "奄 ",
-        "奔 ",
-        "墳 "
+        "󰕿",
+        "󰖀",
+        "󰕾"
       ]
     },
     "scroll-step": 5,
@@ -78,12 +77,12 @@
   "network": {
     "interface": "wlan0",
     "format": "{ifname}",
-    "format-wifi": "直",
-    "format-ethernet": "",
-    "format-disconnected": "睊 ",
+    "format-wifi": "",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪",
     "tooltip-format": "{ifname}",
     "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-ethernet": "{ifname} 󰈀",
     "tooltip-format-disconnected": "Disconnected",
     "on-click": "/home/sean/.config/rofi/wifi/wifi.sh"
   },
@@ -106,8 +105,8 @@
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "",
-      "deactivated": ""
+      "activated": "󰈈",
+      "deactivated": "󰈈"
     }
   },
   "cpu": {
@@ -135,7 +134,7 @@
     "interval": 5
   },
   "custom/launcher": {
-    "format": "",
+    "format": "",
     "on-click": "/usr/bin/rofi -show drun run -theme apps.rasi"
   },
   "custom/recorder": {

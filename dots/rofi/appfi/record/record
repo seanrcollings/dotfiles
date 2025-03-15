@@ -1,0 +1,46 @@
+#!/bin/bash
+
+record() {
+  filename="$(appfi entry Filename:)"
+  path="$(xdg-user-dir VIDEOS)/Captures/$filename.mp4"
+
+  if [ -z "$filename" ]; then
+    exit 1
+  fi
+
+  if [ "$1" = 'audio' ]; then
+    wf-recorder -g "$(slurp -d)" -f $path  --audio
+  elif [ "$1" = 'gif' ]; then
+    gif_path="$(xdg-user-dir VIDEOS)/Captures/$filename.gif" 
+    wf-recorder -g "$(slurp -d)" -f $path && \
+      magick -quiet $path $gif_path && \
+      rm -f $path
+  else
+    wf-recorder -g "$(slurp -d)" -f $path
+  fi
+
+  wl-copy $path
+}
+
+RECORD_AUDIO="Record with audio"
+RECORD_NO_AUDIO="Record without audio"
+RECORD_GIF="Record GIF"
+
+if [[ ! -z "$@" ]]
+then
+  case $@ in
+    $RECORD_AUDIO)
+      record 'audio'
+      ;;
+    $RECORD_NO_AUDIO)
+      record 'no-audio'
+      ;;
+    $RECORD_GIF)
+      record 'gif'
+      ;;
+    *)
+      ;;
+  esac
+else
+  echo -e "$RECORD_AUDIO\n$RECORD_NO_AUDIO\n$RECORD_GIF"
+fi

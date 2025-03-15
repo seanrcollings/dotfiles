@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+LOGOUT=""
+LOCK=""
+SLEEP=""
+HIBERNATE=""
+REBOOT=""
+OFF=""
+
+if [[ ! -z "$@" ]]
+then
+    case $@ in
+        $LOCK)
+            swaylock -f &
+            ;;
+        $HIBERNATE)
+            systemctl hibernate
+            ;;
+        $SLEEP)
+            systemctl suspend
+            ;;
+        $LOGOUT)
+            appfi confirm "Exit Sway?" && sway exit
+            ;;
+        $REBOOT)
+            appfi confirm "Reboot?" && systemctl reboot
+            ;;
+        $OFF)
+            appfi confirm "Shutdown?" && systemctl poweroff
+            ;;
+        *)
+            ;;
+    esac
+else
+    echo -e "$LOCK\n$SLEEP\n$HIBERNATE\n$LOGOUT\n$REBOOT\n$OFF"
+fi
+

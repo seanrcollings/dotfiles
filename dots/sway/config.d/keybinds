@@ -2,7 +2,7 @@
 bindsym $mod+Return exec alacritty
 
 # Recording
-bindsym $altMod+r exec $scripts/record.bash
+bindsym $altMod+r exec /usr/bin/bash $home/.local/bin/record
 
 # lock the screen
 bindsym $altMod+l exec "swaylock"
@@ -10,30 +10,24 @@ bindsym $altMod+l exec "swaylock"
 # put system to sleep
 bindsym $altMod+s exec "systemctl suspend"
 
-# Opens Bluetooth Menu
-bindsym Control+Mod1+b exec "/home/sean/.local/bin/bluemng toggle"
-
 # Color Picker
 bindsym $altMod+c exec $home/.local/bin/cpick
 
 #################### ROFI #######################
-set $rofi_home /home/sean/.config/rofi
-set $appfi /home/sean/.asdf/shims/appfi
+set $rofi_home $home/.config/rofi
+set $appfi $home/.local/bin/appfi
 
 # Open applications menu
 bindsym $mod+d exec rofi -show drun run -theme apps.rasi
 # Open Clipboard
 bindsym $altMod+v exec clipman pick -t rofi --tool-args="-theme clipboard" --max-items=30
 # Powermenu
-bindsym $altMod+p exec $appfi run powermenu-sway --mode standalone --rofi-args "-p :D"
-bindsym $altMod+h exec $appfi run search --mode standalone
+bindsym $altMod+p exec $appfi run powermenu --rofi-args "\-p ' '"
+bindsym $altMod+h exec $appfi run search
 # Emoji
 bindsym $altMod+e exec rofi -mode emoji -show emoji -theme emoji.rasi
-# Projects
-bindsym $altMod+j exec "/home/sean/.asdf/shims/venture browse -p code"
-bindsym $altMod+k exec "/home/sean/.asdf/shims/venture quicklaunch"
 # Screenshot menu
-bindsym Print exec $appfi run screenshot --mode standalone
+bindsym Print exec $appfi run screenshot
 # Window Selection menu
 bindsym Alt+Tab exec rofi -show window -theme $rofi_home/windows.rasi
 

@@ -3,4 +3,4 @@
   text: "Screen Recording";
 }
 
-@import "./shared/choices.rasi"
+@import "../../shared/choices.rasi"

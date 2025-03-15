@@ -3,4 +3,4 @@
   text: "Screenshot";
 }
 
-@import "./shared/choices.rasi"
+@import "../../shared/choices.rasi"

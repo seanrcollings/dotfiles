@@ -1,4 +1,3 @@
-
 format = """
 [┌](bold #3BC0F0)$username\
 $hostname\
@@ -12,8 +11,7 @@ $package\
 $python
 [└─](bold #3BC0F0)$character
 """
-
-
+right_format = """$time"""
 
 [character]
 success_symbol = "[λ](bold #3BC0F0)"
@@ -21,6 +19,7 @@ error_symbol = "[λ](bold red)"
 
 [time]
 disabled = false
+style="bold #3BC0F0"
 
 [aws]
 symbol = "  "
@@ -32,25 +31,16 @@ symbol = " "
 symbol = " "
 
 [directory]
-read_only = " "
+read_only = " "
 
 [docker_context]
 symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
 
 [git_branch]
 symbol = " "
 
 [golang]
 symbol = " "
-
-[hg_branch]
-symbol = " "
 
 [java]
 symbol = " "
@@ -61,23 +51,13 @@ symbol = " "
 [memory_usage]
 symbol = " "
 
-[nim]
-symbol = " "
-
 [nix_shell]
 symbol = " "
 
 [package]
-symbol = " "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
+symbol = " "
 
 [python]
-
 symbol = " "
 
 [ruby]
@@ -86,24 +66,18 @@ symbol = " "
 [rust]
 symbol = " "
 
-[scala]
-symbol = " "
-
 [shlvl]
 symbol = " "
 
-[swift]
-symbol = "ﯣ "
-
 [git_status]
-conflicted = "[](bold red)"
+conflicted = "[ ](bold red)"
 ahead = "$count"
 behind = "$count"
-diverged = ""
-untracked = "[?](bold yellow)"
-modified = "[!](bold red)"
-stashed = "[.](bold yellow)"
-staged = '+'
-renamed = ""
-deleted = "[󰧧](bold red)"
+diverged = " "
+untracked = "[? ](bold yellow)"
+modified = "[! ](bold red)"
+stashed = "[. ](bold yellow)"
+staged = '+ '
+renamed = " "
+deleted = "[󰧧 ](bold red)"
 style = "bold green"

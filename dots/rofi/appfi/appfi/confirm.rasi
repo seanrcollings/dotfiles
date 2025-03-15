@@ -1,5 +1,5 @@
-@import "./themes/colors.rasi"
-@import "./shared/listview-border.rasi"
+@import "../../themes/colors.rasi"
+@import "../../shared/listview-border.rasi"
 
 configuration {
   show-icons: false;

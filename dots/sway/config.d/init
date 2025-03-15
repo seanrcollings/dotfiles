@@ -3,7 +3,7 @@ exec $scripts/xdg-desktop-fix
 exec_always $scripts/displays
 
 # Startup the clipboard
-exec --no-persist wl-paste -n -t text --watch clipman store --max-items=30
+exec_always wl-paste -n -t text --watch clipman store --max-items=30
 
 # Notifcation Daemon
 exec mako
@@ -13,7 +13,7 @@ exec mako
 
 # set background
 # output "*" bg $background fill
-exec_always $scripts/backgrounds primary $bg1 
+exec_always $scripts/backgrounds primary $bg1
 exec_always $scripts/backgrounds secondary $bg2
 exec_always $scripts/backgrounds laptop $bg3
 

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+COPY_CLIPBOARD="Selection to Clipboard"
+SELECT_SCREENSHOTS="Selection to Screenshots"
+SCREENSHOT_DISPLAY="Screenshot of Display to Screenshots"
+
+if [[ ! -z "$@" ]]
+then
+  case $@ in
+    $COPY_CLIPBOARD)
+      grim -g "$(slurp -d)" - | wl-copy
+      ;;
+    $SELECT_SCREENSHOTS)
+      path=$(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim.png')
+      grim -g "$(slurp -d)" $path
+      wl-copy $path
+      ;;
+    $SCREENSHOT_DISPLAY)
+      path=$(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim_display.png')
+      grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') $path
+      wl-copy $path
+      ;;
+    *)
+      ;;
+  esac
+else
+  echo -e "$COPY_CLIPBOARD\n$SELECT_SCREENSHOTS\n$SCREENSHOT_DISPLAY"
+fi

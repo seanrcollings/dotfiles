@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+import subprocess
+import sys
+import webbrowser
+
+
+options = {
+    "  Google": "http://www.google.com/search?q={search}",
+    "  Arch Linux": "https://wiki.archlinux.org/index.php?search={search}",
+    "  Wikipedia": "https://wikipedia.org/w/index.php?search={search}",
+    "  Rosetta Code": "https://wikipedia.org/w/index.php?search={search}",
+    "  Python Docs": "https://docs.python.org/3/search.html?q={search}&check_keywords=yes&area=default",
+}
+
+if len(sys.argv) == 1:
+    print(*options.keys(), sep="\n", end="")
+elif len(sys.argv) == 2:
+    choice = sys.argv[-1]
+    if choice not in options:
+        print("Not a valid choice")
+        sys.exit(1)
+
+    proc = subprocess.run(
+        "appfi entry 'Search Query:'", shell=True, capture_output=True
+    )
+    query = proc.stdout.decode("utf-8")
+    webbrowser.open(options[choice].format(search=query))

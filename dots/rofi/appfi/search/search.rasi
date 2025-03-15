@@ -1,4 +1,4 @@
-@import "./shared/listings.rasi"
+@import "../../shared/listings.rasi"
 
 textbox-custom {
   str: " Search ";
