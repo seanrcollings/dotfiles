@@ -3,7 +3,7 @@
 size = 14.0
 
 [font.normal]
-family = "SauceCodePro Nerd Font"
+family = "FiraCode Nerd Font Mono"
 
 [[keyboard.bindings]]
 action = "CreateNewWindow"

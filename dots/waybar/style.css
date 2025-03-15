@@ -10,7 +10,7 @@
 window#waybar {
   font-family: "Fira Code", "SauceCodePro Nerd Font", sans-serif;
   background-color: @base00;
-  border-radius: 0px 0px 10px 10px;
+  /* border-radius: 0px 0px 10px 10px; */
 }
 
 window > box {
