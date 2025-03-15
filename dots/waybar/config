@@ -12,11 +12,13 @@
     "custom/recorder",
     "tray",
     "idle_inhibitor",
+    "custom/bluetooth",
     "pulseaudio",
     "network",
     "battery",
     "custom/weather",
-    "clock"
+    "clock",
+    "custom/powermenu"
   ],
   "sway/window": {
     "max-length": 50
@@ -123,16 +125,6 @@
     "icon-size": 16,
     "spacing": 15
   },
-  "custom/scythe": {
-    "return-type": "json",
-    "exec": "/home/sean/.asdf/shims/scythe waybar",
-    "format": "{icon}{}",
-    "format-icons": {
-      "active": "<span background=\"#f36c00\" foreground=\"#fff\" weight=\"bold\"> H </span>",
-      "inactive": ""
-    },
-    "interval": 5
-  },
   "custom/launcher": {
     "format": "",
     "on-click": "/usr/bin/rofi -show drun run -theme apps.rasi"
@@ -150,5 +142,10 @@
     "interval": 3600,
     "exec": "/home/sean/.config/waybar/scripts/wttr",
     "return-type": "json"
+  },
+  "custom/powermenu": {
+    "format": "   ",
+    "on-click": "/home/sean/.local/bin/appfi run powermenu --rofi-args \"\\-p :D\"",
+    "tooltip": false
   }
 }

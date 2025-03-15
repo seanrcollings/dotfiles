@@ -10,3 +10,4 @@
     ~/.themes: themes
     ~/templates: flavour-templates
     ~/.local/bin/record: scripts/record
+    ~/.local/bin/bluemng: scripts/bluemng
