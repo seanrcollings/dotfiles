@@ -10,12 +10,3 @@ function swap
         echo "Swaps the two provided files or directories"
     end
 end
-
-function csv
-    perl -pe 's/((?<=,)|(?<=^)),/ ,/g;' "$argv" | column -t -s, | less  -F -S -X -K
-end
-
-function set-title
-    printf '\033]2;%s\007' $argv[1]
-end
-
