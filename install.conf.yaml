@@ -7,6 +7,8 @@
     ~/.config/rofi: dots/rofi
     ~/.config/waybar: dots/waybar
     ~/.config/nvim: dots/nvim
+    ~/.config/i3: dots/i3
+    ~/.config/flavours: dots/flavours
     ~/.themes: themes
     ~/templates: flavour-templates
     ~/.local/bin/record: scripts/record
