@@ -67,6 +67,10 @@ window > box {
   margin: 5px 0px;
 }
 
+#clock {
+  padding-right: 15px;
+}
+
 /*  Left Side "Module" Edges */
 #custom-bluetooth,
 #custom-weather,
