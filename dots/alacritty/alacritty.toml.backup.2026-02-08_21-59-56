@@ -1,0 +1,18 @@
+
+[font]
+size = 14.0
+
+[font.normal]
+family = "FiraCode Nerd Font Mono"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "T"
+mods = "Control"
+
+[window.padding]
+x = 0
+y = 0
+
+[general]
+import = ["/home/sean/.config/alacritty/colors.toml"]
