@@ -7,13 +7,8 @@ gaps inner 10
 gaps outer 10
 hide_edge_borders smart_no_gaps
 
-for_window [title="ranger"] floating enable
 for_window [title="floatme"] floating enable
 for_window [class="floatme"] floating enable
-for_window [app_id="org.gnome.Nautilus"] floating enable
-for_window [title="Pong!"] floating enable
-for_window [class="Gnome-screenshot"] floating enable
-for_window [title="Volume Control"] floating enable
 for_window [app_id="imv"] floating enable
 for_window [app_id="mpv"] floating enable
 for_window [class="zoom"] floating enable
@@ -21,5 +16,6 @@ for_window [class="Bitwarden"] floating enable
 for_window [app_id="firefox" title="Firefox - Sharing Indicator"] {
   kill
 }
+for_window [app_id="org.quickshell*"] floating enable
 
 focus_on_window_activation focus
