@@ -1,0 +1,5 @@
+[config]
+[templates.sway]
+input_path = '~/.config/matugen/templates/sway-colors.conf'
+output_path = '~/.config/sway/config.d/colors'
+post_hook = 'swaymsg reload'

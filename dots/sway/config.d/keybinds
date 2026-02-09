@@ -4,44 +4,8 @@ bindsym $mod+Return exec alacritty
 # Recording
 bindsym $altMod+r exec /usr/bin/bash $home/.local/bin/record
 
-# lock the screen
-bindsym $altMod+l exec "swaylock"
-
 # put system to sleep
 bindsym $altMod+s exec "systemctl suspend"
-
-# Color Picker
-bindsym $altMod+c exec $home/.local/bin/cpick
-
-#################### ROFI #######################
-set $rofi_home $home/.config/rofi
-set $appfi $home/.local/bin/appfi
-
-# Open Launcher
-bindsym $mod+Space exec $appfi run launcher
-# Open applications menu
-bindsym $mod+d exec rofi -show drun run -theme apps.rasi
-# Open Clipboard
-bindsym $altMod+v exec clipman pick -t rofi --tool-args="-theme clipboard" --max-items=30
-# Powermenu
-bindsym $altMod+p exec $appfi run powermenu --rofi-args "\-p ' '"
-bindsym $altMod+h exec $appfi run search
-# Emoji
-bindsym $altMod+e exec rofi -mode emoji -show emoji -theme emoji.rasi
-# Screenshot menu
-bindsym Print exec $appfi run screenshot
-# Window Selection menu
-bindsym Alt+Tab exec rofi -show window -theme $rofi_home/windows.rasi
-
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position`
 floating_modifier $mod

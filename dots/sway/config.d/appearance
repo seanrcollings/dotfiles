@@ -1,14 +1,6 @@
 # Font for window titles.
 font pango:Fira Code 10
 
-# class                  border   backgr   text     indicator child_border
-client.focused          $base02 $base02 $base05 $base0D $base0D
-client.focused_inactive $base01 $base01 $base05 $base03 $base01
-client.unfocused        $base01 $base00 $base05 $base01 $base01
-client.urgent           $base08 $base08 $base00 $base08 $base08
-client.placeholder      $base00 $base00 $base05 $base00 $base00
-client.background       $base07
-
 default_border pixel 2
 gaps top   5
 gaps inner 10

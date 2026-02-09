@@ -1,0 +1,24 @@
+# Startup
+exec dms run
+exec wl-paste --watch cliphist store
+
+# DMS Keybindings
+bindsym $mod+d exec dms ipc call spotlight toggle
+bindsym $altMod+v exec dms ipc call clipboard toggle
+#bindsym $mod+m exec dms ipc call processlist focusOrToggle
+bindsym $mod+comma exec dms ipc call settings focusOrToggle
+
+# Audio controls
+bindsym XF86AudioRaiseVolume exec dms ipc call audio increment 3
+bindsym XF86AudioLowerVolume exec dms ipc call audio decrement 3
+bindsym XF86AudioMute exec dms ipc call audio mute
+
+# Brightness controls
+bindsym XF86MonBrightnessUp exec dms ipc call brightness increment 5 backlight:intel_backlight
+bindsym XF86MonBrightnessDown exec dms ipc call brightness decrement 5 backlight:intel_backlight
+
+# Pick Color
+bindsym $altMod+c exec dms color pick -a
+
+# Lock the screen 
+bindsym $altMod+L exec dms ipc call lock lock
