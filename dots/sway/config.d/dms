@@ -21,4 +21,8 @@ bindsym XF86MonBrightnessDown exec dms ipc call brightness decrement 5 backlight
 bindsym $altMod+c exec dms color pick -a
 
 # Lock the screen 
-bindsym $altMod+L exec dms ipc call lock lock
+bindsym $altMod+l exec dms ipc call lock lock
+
+# Take a screenshot
+bindsym Print exec dms screenshot --no-file 
+bindsym Alt+Print exec dms screenshot full --no-file 

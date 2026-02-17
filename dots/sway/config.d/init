@@ -1,6 +1,6 @@
 # exec $scripts/xdg-desktop-fix
 
-# exec_always $scripts/displays
+exec_always $scripts/displays
 
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable

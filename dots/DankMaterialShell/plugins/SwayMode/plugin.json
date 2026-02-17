@@ -1,0 +1,12 @@
+{
+  "id": "swayMode",
+  "name": "Display Sway Mode" ,
+  "description": "Displays the current Sway binding mode (default, resize, etc.)",
+  "version": "1.0.0",
+  "author": "Sean Collings",
+  "icon": "keyboard",
+  "type": "widget",
+  "component": "./SwayModeWidget.qml",
+  "settings": "./SwayModeSettings.qml",
+  "permissions": ["settings_read", "settings_write"]
+}

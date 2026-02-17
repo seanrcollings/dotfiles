@@ -1,0 +1,8 @@
+{
+  "swayMode": {
+    "enabled": true
+  },
+  "myPlugin": {
+    "displayText": "test"
+  }
+}
