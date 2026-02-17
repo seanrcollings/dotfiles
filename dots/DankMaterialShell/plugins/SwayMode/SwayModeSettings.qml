@@ -23,7 +23,7 @@ PluginSettings {
         wrapMode: Text.WordWrap
     }
 
-    BoolSetting {
+    ToggleSettting {
         settingKey: "hideDefault"
         label: "Hide Default Mode"
         description: "Only show widget when not in default mode"
