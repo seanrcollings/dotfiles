@@ -15,4 +15,5 @@
     ~/.local/bin/bluemng: scripts/bluemng
     ~/.config/DankMaterialShell: dots/DankMaterialShell
     ~/.config/matugen: dots/matugen
+    ~/.config/niri: dots/niri
 
