@@ -1,15 +1,19 @@
 binds {
     // === System & Overview ===
-    Mod+D repeat=false { toggle-overview; }
     Mod+Tab repeat=false { toggle-overview; }
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // === Application Launchers ===
+    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
-    Mod+Space hotkey-overlay-title="Application Launcher" {
+    // Note: Mod+D is used for toggle-overview above, use Mod+Space for launcher
+    Mod+D hotkey-overlay-title="Application Launcher" {
         spawn "dms" "ipc" "call" "spotlight" "toggle";
     }
     Mod+V hotkey-overlay-title="Clipboard Manager" {
+        spawn "dms" "ipc" "call" "clipboard" "toggle";
+    }
+    Mod+Alt+V hotkey-overlay-title="Clipboard Manager" {
         spawn "dms" "ipc" "call" "clipboard" "toggle";
     }
     Mod+M hotkey-overlay-title="Task Manager" {
@@ -20,15 +24,15 @@ binds {
     Mod+Comma hotkey-overlay-title="Settings" {
         spawn "dms" "ipc" "call" "settings" "focusOrToggle";
     }
-    Mod+Y hotkey-overlay-title="Browse Wallpapers" {
-        spawn "dms" "ipc" "call" "dankdash" "wallpaper";
-    }
     Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
     Mod+Shift+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
 
     // === Security ===
     Mod+Alt+L hotkey-overlay-title="Lock Screen" {
         spawn "dms" "ipc" "call" "lock" "lock";
+    }
+    Mod+Alt+S hotkey-overlay-title="System Suspend" {
+        spawn "systemctl" "suspend";
     }
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" {
@@ -165,6 +169,7 @@ binds {
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
+    Mod+0 { focus-workspace 10; }
 
     // === Move to Numbered Workspaces ===
     Mod+Shift+1 { move-column-to-workspace 1; }
@@ -176,6 +181,7 @@ binds {
     Mod+Shift+7 { move-column-to-workspace 7; }
     Mod+Shift+8 { move-column-to-workspace 8; }
     Mod+Shift+9 { move-column-to-workspace 9; }
+    Mod+Shift+0 { move-column-to-workspace 10; }
 
     // === Column Management ===
     Mod+BracketLeft  { consume-or-expel-window-left; }
@@ -197,13 +203,22 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     // === Screenshots ===
+    // Note: Use 'dms screenshot --no-file' for clipboard-only screenshots
     XF86Launch1 { screenshot; }
     Ctrl+XF86Launch1 { screenshot-screen; }
     Alt+XF86Launch1 { screenshot-window; }
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
+
+    // === Utilities ===
+    Mod+Alt+C hotkey-overlay-title="Color Picker" {
+        spawn "dms" "color" "pick" "-a";
+    }
+    Mod+Alt+R hotkey-overlay-title="Screen Recording" {
+        spawn "/usr/bin/bash" "/home/sean/.local/bin/record";
+    }
     // === System Controls ===
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-    Mod+Shift+P { power-off-monitors; }
+    Mod+Ctrl+P { power-off-monitors; }
 }

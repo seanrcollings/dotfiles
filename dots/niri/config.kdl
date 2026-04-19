@@ -75,7 +75,7 @@ input {
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    // focus-follows-mouse max-scroll-amount="0%"
+    focus-follows-mouse max-scroll-amount="0%"
 }
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
@@ -157,7 +157,11 @@ overview {
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
-// This line starts waybar, a commonly used bar for Wayland compositors.
+
+// Startup commands (from Sway config)
+// Note: dms run removed - DMS starts via systemd/xdg-desktop-autostart
+spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
+
 environment {
   XDG_CURRENT_DESKTOP "niri"
 }
@@ -243,7 +247,17 @@ window-rule {
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id="zoom"
+    match app-id="imv"
+    match app-id="mpv"
+    match app-id="Bitwarden"
+    match title="floatme"
     open-floating true
+}
+// Kill Firefox sharing indicator (Sway compatibility)
+window-rule {
+    match app-id="firefox" title="Firefox - Sharing Indicator"
+    open-floating true
+    opacity 0.0
 }
 // Open dms windows as floating by default
 window-rule {
