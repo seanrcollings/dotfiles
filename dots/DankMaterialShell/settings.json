@@ -401,10 +401,29 @@
     ]
   },
   "showOnLastDisplay": {},
-  "niriOutputSettings": {},
+  "niriOutputSettings": {
+    "eDP-1": {},
+    "DP-3": {}
+  },
   "hyprlandOutputSettings": {},
-  "displayProfiles": {},
-  "activeDisplayProfile": {},
+  "displayProfiles": {
+    "niri": {
+      "profile_1784408264110_b7jhli": {
+        "id": "profile_1784408264110_b7jhli",
+        "name": "Docked",
+        "outputSet": [
+          "DP-3",
+          "DP-4",
+          "eDP-1"
+        ],
+        "createdAt": 1784408264110,
+        "updatedAt": 1784408264110
+      }
+    }
+  },
+  "activeDisplayProfile": {
+    "niri": "profile_1784408264110_b7jhli"
+  },
   "displayProfileAutoSelect": false,
   "displayShowDisconnected": false,
   "displaySnapToEdge": true,
